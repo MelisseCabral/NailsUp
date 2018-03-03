@@ -1,0 +1,69 @@
+__d(function (global, require, module, exports, _dependencyMap) {
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+
+  var _react = require(_dependencyMap[0], "react");
+
+  var _react2 = _interopRequireDefault(_react);
+
+  var _reactNative = require(_dependencyMap[1], "react-native");
+
+  var _InicialTabs = require(_dependencyMap[2], "./Screens/InicialTabs");
+
+  var _InicialTabs2 = _interopRequireDefault(_InicialTabs);
+
+  var _Home = require(_dependencyMap[3], "./Screens/Home");
+
+  var _Home2 = _interopRequireDefault(_Home);
+
+  var _reactNavigation = require(_dependencyMap[4], "react-navigation");
+
+  function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+  var App = (0, _reactNavigation.StackNavigator)({
+    HomeScreen: {
+      screen: _Home2.default,
+      navigationOptions: function navigationOptions(_ref) {
+        var navigation = _ref.navigation;
+        return {
+          title: '',
+          header: null
+        };
+      }
+    },
+    Inicial: {
+      screen: _InicialTabs2.default,
+      navigationOptions: function navigationOptions(_ref2) {
+        var navigation = _ref2.navigation;
+        return {
+          title: '',
+          header: null
+        };
+      }
+    },
+    SignUpScreen: {
+      screen: _InicialTabs2.default,
+      navigationOptions: {
+        title: '',
+        header: null
+      }
+    },
+    LoginScreen: {
+      screen: _InicialTabs2.default,
+      navigationOptions: function navigationOptions(_ref3) {
+        var navigation = _ref3.navigation;
+        return {
+          title: '',
+          header: null
+        };
+      }
+    }
+  }, {
+    headerMode: 'screen',
+    header: {
+      visible: false
+    }
+  });
+  exports.default = App;
+});

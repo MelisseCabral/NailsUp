@@ -1,0 +1,14 @@
+__d(function (global, require, module, exports, _dependencyMap) {
+  'use strict';
+
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+
+  var _reactNative = require(_dependencyMap[0], "react-native");
+
+  exports.default = {
+    pixel: 1 / _reactNative.PixelRatio.get(),
+    tabBarHeight: 49
+  };
+});

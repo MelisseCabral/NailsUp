@@ -1,0 +1,13 @@
+__d(function (global, require, module, exports, _dependencyMap) {
+  module.exports = require(_dependencyMap[0], "react-native/Libraries/Image/AssetRegistry").registerAsset({
+    "__packager_asset": true,
+    "httpServerLocation": "/assets/node_modules/react-native-checkbox",
+    "width": 26,
+    "height": 26,
+    "scales": [1],
+    "hash": "a9b8f026785d2361460fda2616107a13",
+    "name": "cb_disabled",
+    "type": "png",
+    "fileHashes": ["a9b8f026785d2361460fda2616107a13"]
+  });
+});
