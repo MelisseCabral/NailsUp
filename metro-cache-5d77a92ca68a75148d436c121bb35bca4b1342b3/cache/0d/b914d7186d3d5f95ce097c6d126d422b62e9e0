@@ -13,9 +13,9 @@ __d(function (global, require, module, exports, _dependencyMap) {
 
   var _InicialTabs2 = _interopRequireDefault(_InicialTabs);
 
-  var _Home = require(_dependencyMap[3], "./Screens/Home");
+  var _TabHome = require(_dependencyMap[3], "./Screens/TabHome");
 
-  var _Home2 = _interopRequireDefault(_Home);
+  var _TabHome2 = _interopRequireDefault(_TabHome);
 
   var _reactNavigation = require(_dependencyMap[4], "react-navigation");
 
@@ -23,7 +23,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
 
   var App = (0, _reactNavigation.StackNavigator)({
     HomeScreen: {
-      screen: _Home2.default,
+      screen: _TabHome2.default,
       navigationOptions: function navigationOptions(_ref) {
         var navigation = _ref.navigation;
         return {

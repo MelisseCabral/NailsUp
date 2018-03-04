@@ -1,7 +1,7 @@
 import React from 'react';
 import { StyleSheet, Text, View, TextInput, Button } from 'react-native';
 import InicialTabs from './Screens/InicialTabs';
-import Home from './Screens/Home';
+import TabHome from './Screens/TabHome';
 import Login from './Screens/InicialTabs';
 import SignUp from './Screens/InicialTabs';
 import { StackNavigator} from 'react-navigation';
@@ -9,7 +9,7 @@ import { StackNavigator} from 'react-navigation';
 const App = StackNavigator(
   {
     HomeScreen: {
-      screen: Home,
+      screen: TabHome,
       navigationOptions: ({navigation}) => ({
         title: '', 
         header: null

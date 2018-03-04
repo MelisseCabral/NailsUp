@@ -1,0 +1,406 @@
+__d(function (global, require, module, exports, _dependencyMap) {
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+
+  var _react2 = require(_dependencyMap[0], "react");
+
+  var _react3 = _interopRequireDefault(_react2);
+
+  var _index = require(_dependencyMap[1], "./../node_modules/react-transform-hmr/lib/index.js");
+
+  var _index2 = _interopRequireDefault(_index);
+
+  var _jsxFileName = "/home/melisse/Documents/nailsUp/Screens/TabHome.js",
+      _class,
+      _temp2;
+
+  var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+  var _reactNative = require(_dependencyMap[2], "react-native");
+
+  var _reactNativeTabNavigator = require(_dependencyMap[3], "react-native-tab-navigator");
+
+  var _reactNativeTabNavigator2 = _interopRequireDefault(_reactNativeTabNavigator);
+
+  var _FontAwesome = require(_dependencyMap[4], "@expo/vector-icons/FontAwesome");
+
+  var _FontAwesome2 = _interopRequireDefault(_FontAwesome);
+
+  var _reactNavigation = require(_dependencyMap[5], "react-navigation");
+
+  var _Home = require(_dependencyMap[6], "./Home");
+
+  var _Home2 = _interopRequireDefault(_Home);
+
+  var _Services = require(_dependencyMap[7], "./Services");
+
+  var _Services2 = _interopRequireDefault(_Services);
+
+  function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+  function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+  function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+  function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+  var _components = {
+    Scheduling: {
+      displayName: "Scheduling"
+    },
+    Contact: {
+      displayName: "Contact"
+    },
+    TabHome: {
+      displayName: "TabHome"
+    }
+  };
+
+  var _node_modulesReactTransformHmrLibIndexJs2 = (0, _index2.default)({
+    filename: "/home/melisse/Documents/nailsUp/Screens/TabHome.js",
+    components: _components,
+    locals: [module],
+    imports: [_react3.default]
+  });
+
+  function _wrapComponent(id) {
+    return function (Component) {
+      return _node_modulesReactTransformHmrLibIndexJs2(Component, id);
+    };
+  }
+
+  var deviceW = _reactNative.Dimensions.get('window').width;
+
+  var basePx = 375;
+
+  function px2dp(px) {
+    return px * deviceW / basePx;
+  }
+
+  var Scheduling = _wrapComponent("Scheduling")(function (_React$Component) {
+    _inherits(Scheduling, _React$Component);
+
+    function Scheduling() {
+      _classCallCheck(this, Scheduling);
+
+      return _possibleConstructorReturn(this, (Scheduling.__proto__ || Object.getPrototypeOf(Scheduling)).apply(this, arguments));
+    }
+
+    _createClass(Scheduling, [{
+      key: "render",
+      value: function render() {
+        return _react3.default.createElement(
+          _reactNative.View,
+          {
+            style: styles.container,
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 20
+            }
+          },
+          _react3.default.createElement(
+            _reactNative.Text,
+            {
+              style: styles.welcome,
+              __source: {
+                fileName: _jsxFileName,
+                lineNumber: 21
+              }
+            },
+            "Agendar"
+          )
+        );
+      }
+    }]);
+
+    return Scheduling;
+  }(_react3.default.Component));
+
+  var Contact = _wrapComponent("Contact")(function (_React$Component2) {
+    _inherits(Contact, _React$Component2);
+
+    function Contact() {
+      _classCallCheck(this, Contact);
+
+      return _possibleConstructorReturn(this, (Contact.__proto__ || Object.getPrototypeOf(Contact)).apply(this, arguments));
+    }
+
+    _createClass(Contact, [{
+      key: "render",
+      value: function render() {
+        return _react3.default.createElement(
+          _reactNative.View,
+          {
+            style: styles.container,
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 33
+            }
+          },
+          _react3.default.createElement(
+            _reactNative.Text,
+            {
+              style: styles.welcome,
+              __source: {
+                fileName: _jsxFileName,
+                lineNumber: 34
+              }
+            },
+            "Servi\xE7os"
+          )
+        );
+      }
+    }]);
+
+    return Contact;
+  }(_react3.default.Component));
+
+  var TabHome = _wrapComponent("TabHome")((_temp2 = _class = function (_React$Component3) {
+    _inherits(TabHome, _React$Component3);
+
+    function TabHome() {
+      var _ref;
+
+      var _temp, _this3, _ret;
+
+      _classCallCheck(this, TabHome);
+
+      for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+        args[_key] = arguments[_key];
+      }
+
+      return _ret = (_temp = (_this3 = _possibleConstructorReturn(this, (_ref = TabHome.__proto__ || Object.getPrototypeOf(TabHome)).call.apply(_ref, [this].concat(args))), _this3), _this3.state = {
+        selectedTab: 'inicial'
+      }, _temp), _possibleConstructorReturn(_this3, _ret);
+    }
+
+    _createClass(TabHome, [{
+      key: "render",
+      value: function render() {
+        var _this4 = this;
+
+        var navigate = this.props.navigation.navigate;
+        return _react3.default.createElement(
+          _reactNativeTabNavigator2.default,
+          {
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 58
+            }
+          },
+          _react3.default.createElement(
+            _reactNativeTabNavigator2.default.Item,
+            {
+              selected: this.state.selectedTab === 'inicial',
+              renderIcon: function renderIcon() {
+                return _react3.default.createElement(_FontAwesome2.default, {
+                  name: "home",
+                  size: px2dp(22),
+                  color: "#666",
+                  __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 61
+                  }
+                });
+              },
+              renderSelectedIcon: function renderSelectedIcon() {
+                return _react3.default.createElement(_FontAwesome2.default, {
+                  name: "home",
+                  size: px2dp(22),
+                  color: "#3496f0",
+                  __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 62
+                  }
+                });
+              },
+              onPress: function onPress() {
+                return _this4.setState({
+                  selectedTab: 'inicial'
+                });
+              },
+              __source: {
+                fileName: _jsxFileName,
+                lineNumber: 59
+              }
+            },
+            _react3.default.createElement(_Home2.default, {
+              __source: {
+                fileName: _jsxFileName,
+                lineNumber: 64
+              }
+            })
+          ),
+          _react3.default.createElement(
+            _reactNativeTabNavigator2.default.Item,
+            {
+              selected: this.state.selectedTab === 'services',
+              renderIcon: function renderIcon() {
+                return _react3.default.createElement(_FontAwesome2.default, {
+                  name: "bars",
+                  size: px2dp(22),
+                  color: "#666",
+                  __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 68
+                  }
+                });
+              },
+              renderSelectedIcon: function renderSelectedIcon() {
+                return _react3.default.createElement(_FontAwesome2.default, {
+                  name: "bars",
+                  size: px2dp(22),
+                  color: "#3496f0",
+                  __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 69
+                  }
+                });
+              },
+              onPress: function onPress() {
+                return _this4.setState({
+                  selectedTab: 'services'
+                });
+              },
+              __source: {
+                fileName: _jsxFileName,
+                lineNumber: 66
+              }
+            },
+            _react3.default.createElement(_Services2.default, {
+              __source: {
+                fileName: _jsxFileName,
+                lineNumber: 71
+              }
+            })
+          ),
+          _react3.default.createElement(
+            _reactNativeTabNavigator2.default.Item,
+            {
+              selected: this.state.selectedTab === 'scheduling',
+              renderIcon: function renderIcon() {
+                return _react3.default.createElement(_FontAwesome2.default, {
+                  name: "calendar",
+                  size: px2dp(22),
+                  color: "#666",
+                  __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 75
+                  }
+                });
+              },
+              renderSelectedIcon: function renderSelectedIcon() {
+                return _react3.default.createElement(_FontAwesome2.default, {
+                  name: "calendar",
+                  size: px2dp(22),
+                  color: "#3496f0",
+                  __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 76
+                  }
+                });
+              },
+              onPress: function onPress() {
+                return _this4.setState({
+                  selectedTab: 'scheduling'
+                });
+              },
+              __source: {
+                fileName: _jsxFileName,
+                lineNumber: 73
+              }
+            },
+            _react3.default.createElement(Scheduling, {
+              __source: {
+                fileName: _jsxFileName,
+                lineNumber: 78
+              }
+            })
+          ),
+          _react3.default.createElement(
+            _reactNativeTabNavigator2.default.Item,
+            {
+              selected: this.state.selectedTab === 'contact',
+              renderIcon: function renderIcon() {
+                return _react3.default.createElement(_FontAwesome2.default, {
+                  name: "envelope",
+                  size: px2dp(22),
+                  color: "#666",
+                  __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 82
+                  }
+                });
+              },
+              renderSelectedIcon: function renderSelectedIcon() {
+                return _react3.default.createElement(_FontAwesome2.default, {
+                  name: "envelope",
+                  size: px2dp(22),
+                  color: "#3496f0",
+                  __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 83
+                  }
+                });
+              },
+              onPress: function onPress() {
+                return _this4.setState({
+                  selectedTab: 'contact'
+                });
+              },
+              __source: {
+                fileName: _jsxFileName,
+                lineNumber: 80
+              }
+            },
+            _react3.default.createElement(Contact, {
+              __source: {
+                fileName: _jsxFileName,
+                lineNumber: 85
+              }
+            })
+          )
+        );
+      }
+    }]);
+
+    return TabHome;
+  }(_react3.default.Component), _class.navigationOptions = {
+    header: null
+  }, _class.navigationOptions = {
+    title: '',
+    header: null
+  }, _temp2));
+
+  exports.default = TabHome;
+
+  var styles = _reactNative.StyleSheet.create({
+    container: {
+      flex: 1,
+      backgroundColor: '#da5353',
+      alignItems: 'center',
+      justifyContent: 'center'
+    },
+    alignRight: {
+      marginTop: 20,
+      marginRight: 60,
+      alignSelf: 'flex-end'
+    },
+    welcome: {
+      marginBottom: 20
+    },
+    textinput: {
+      height: 40,
+      width: 250
+    },
+    button: {
+      color: "#3496f0",
+      margin: 20
+    },
+    slide: {},
+    serviceCard: {
+      height: 60
+    }
+  });
+});
