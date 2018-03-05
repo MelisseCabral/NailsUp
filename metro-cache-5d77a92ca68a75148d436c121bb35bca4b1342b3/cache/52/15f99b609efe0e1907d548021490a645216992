@@ -1,0 +1,12 @@
+__d(function (global, require, module, exports, _dependencyMap) {
+  module.exports = require(_dependencyMap[0], "react-native/Libraries/Image/AssetRegistry").registerAsset({
+    "__packager_asset": true,
+    "httpServerLocation": "/assets/icons",
+    "width": 256,
+    "height": 142,
+    "scales": [1],
+    "hash": "1166b7bed71bc434c1840af42c5b0e94",
+    "name": "waxing",
+    "type": "png"
+  });
+});

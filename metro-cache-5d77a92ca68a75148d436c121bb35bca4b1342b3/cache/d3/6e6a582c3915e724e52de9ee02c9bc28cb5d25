@@ -1,0 +1,12 @@
+__d(function (global, require, module, exports, _dependencyMap) {
+  module.exports = require(_dependencyMap[0], "react-native/Libraries/Image/AssetRegistry").registerAsset({
+    "__packager_asset": true,
+    "httpServerLocation": "/assets/icons",
+    "width": 256,
+    "height": 255,
+    "scales": [1],
+    "hash": "3fec82fb7ae75a71b4a669d51d82a228",
+    "name": "spray_tan",
+    "type": "png"
+  });
+});

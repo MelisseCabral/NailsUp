@@ -1,0 +1,12 @@
+__d(function (global, require, module, exports, _dependencyMap) {
+  module.exports = require(_dependencyMap[0], "react-native/Libraries/Image/AssetRegistry").registerAsset({
+    "__packager_asset": true,
+    "httpServerLocation": "/assets/icons",
+    "width": 255,
+    "height": 168,
+    "scales": [1],
+    "hash": "b76a3973733717ff68f519b7c437d5fa",
+    "name": "massage",
+    "type": "png"
+  });
+});

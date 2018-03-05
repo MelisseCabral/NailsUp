@@ -75,21 +75,19 @@ __d(function (global, require, module, exports, _dependencyMap) {
             },
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 19
+              lineNumber: 20
             }
           },
           _react3.default.createElement(
-            _reactNative.Image,
+            _reactNative.ImageBackground,
             {
               source: this.props.source,
-              resizeMode: ["stretch", this.props.resizeMode],
-              resizeMethod: ["resize", this.props.resizeMethod],
-              style: [styles.imageContainer, {
-                height: this.state.calc_height
-              }],
+              resizeMode: this.props.resizeMode || "stretch",
+              resizeMethod: this.props.resizeMethod || "resize",
+              style: [styles.imageContainer],
               __source: {
                 fileName: _jsxFileName,
-                lineNumber: 20
+                lineNumber: 21
               }
             },
             this.props.title !== undefined && _react3.default.createElement(
@@ -98,7 +96,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
                 style: styles.imageTitleText,
                 __source: {
                   fileName: _jsxFileName,
-                  lineNumber: 22
+                  lineNumber: 23
                 }
               },
               this.props.title

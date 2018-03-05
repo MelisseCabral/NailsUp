@@ -1,4 +1,8 @@
 __d(function (global, require, module, exports, _dependencyMap) {
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+
   var _react2 = require(_dependencyMap[0], "react");
 
   var _react3 = _interopRequireDefault(_react2);
@@ -91,6 +95,8 @@ __d(function (global, require, module, exports, _dependencyMap) {
 
     return Home;
   }(_react3.default.Component));
+
+  exports.default = Home;
 
   var styles = _reactNative.StyleSheet.create({
     container: {

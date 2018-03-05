@@ -11,11 +11,11 @@ __d(function (global, require, module, exports, _dependencyMap) {
 
   var _index2 = _interopRequireDefault(_index);
 
-  var _jsxFileName = "/home/melisse/Documents/nailsUp/Screens/TabHome.js",
-      _class,
-      _temp2;
-
   var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+  var _class,
+      _temp2,
+      _jsxFileName = "/home/melisse/Documents/nailsUp/Screens/TabHome.js";
 
   var _reactNative = require(_dependencyMap[2], "react-native");
 
@@ -37,6 +37,14 @@ __d(function (global, require, module, exports, _dependencyMap) {
 
   var _Services2 = _interopRequireDefault(_Services);
 
+  var _Scheduling = require(_dependencyMap[8], "./Scheduling");
+
+  var _Scheduling2 = _interopRequireDefault(_Scheduling);
+
+  var _Contact = require(_dependencyMap[9], "./Contact");
+
+  var _Contact2 = _interopRequireDefault(_Contact);
+
   function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
   function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -46,12 +54,6 @@ __d(function (global, require, module, exports, _dependencyMap) {
   function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
   var _components = {
-    Scheduling: {
-      displayName: "Scheduling"
-    },
-    Contact: {
-      displayName: "Contact"
-    },
     TabHome: {
       displayName: "TabHome"
     }
@@ -78,91 +80,13 @@ __d(function (global, require, module, exports, _dependencyMap) {
     return px * deviceW / basePx;
   }
 
-  var Scheduling = _wrapComponent("Scheduling")(function (_React$Component) {
-    _inherits(Scheduling, _React$Component);
-
-    function Scheduling() {
-      _classCallCheck(this, Scheduling);
-
-      return _possibleConstructorReturn(this, (Scheduling.__proto__ || Object.getPrototypeOf(Scheduling)).apply(this, arguments));
-    }
-
-    _createClass(Scheduling, [{
-      key: "render",
-      value: function render() {
-        return _react3.default.createElement(
-          _reactNative.View,
-          {
-            style: styles.container,
-            __source: {
-              fileName: _jsxFileName,
-              lineNumber: 20
-            }
-          },
-          _react3.default.createElement(
-            _reactNative.Text,
-            {
-              style: styles.welcome,
-              __source: {
-                fileName: _jsxFileName,
-                lineNumber: 21
-              }
-            },
-            "Agendar"
-          )
-        );
-      }
-    }]);
-
-    return Scheduling;
-  }(_react3.default.Component));
-
-  var Contact = _wrapComponent("Contact")(function (_React$Component2) {
-    _inherits(Contact, _React$Component2);
-
-    function Contact() {
-      _classCallCheck(this, Contact);
-
-      return _possibleConstructorReturn(this, (Contact.__proto__ || Object.getPrototypeOf(Contact)).apply(this, arguments));
-    }
-
-    _createClass(Contact, [{
-      key: "render",
-      value: function render() {
-        return _react3.default.createElement(
-          _reactNative.View,
-          {
-            style: styles.container,
-            __source: {
-              fileName: _jsxFileName,
-              lineNumber: 33
-            }
-          },
-          _react3.default.createElement(
-            _reactNative.Text,
-            {
-              style: styles.welcome,
-              __source: {
-                fileName: _jsxFileName,
-                lineNumber: 34
-              }
-            },
-            "Servi\xE7os"
-          )
-        );
-      }
-    }]);
-
-    return Contact;
-  }(_react3.default.Component));
-
-  var TabHome = _wrapComponent("TabHome")((_temp2 = _class = function (_React$Component3) {
-    _inherits(TabHome, _React$Component3);
+  var TabHome = _wrapComponent("TabHome")((_temp2 = _class = function (_React$Component) {
+    _inherits(TabHome, _React$Component);
 
     function TabHome() {
       var _ref;
 
-      var _temp, _this3, _ret;
+      var _temp, _this, _ret;
 
       _classCallCheck(this, TabHome);
 
@@ -170,15 +94,15 @@ __d(function (global, require, module, exports, _dependencyMap) {
         args[_key] = arguments[_key];
       }
 
-      return _ret = (_temp = (_this3 = _possibleConstructorReturn(this, (_ref = TabHome.__proto__ || Object.getPrototypeOf(TabHome)).call.apply(_ref, [this].concat(args))), _this3), _this3.state = {
+      return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = TabHome.__proto__ || Object.getPrototypeOf(TabHome)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
         selectedTab: 'inicial'
-      }, _temp), _possibleConstructorReturn(_this3, _ret);
+      }, _temp), _possibleConstructorReturn(_this, _ret);
     }
 
     _createClass(TabHome, [{
       key: "render",
       value: function render() {
-        var _this4 = this;
+        var _this2 = this;
 
         var navigate = this.props.navigation.navigate;
         return _react3.default.createElement(
@@ -186,7 +110,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
           {
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 58
+              lineNumber: 36
             }
           },
           _react3.default.createElement(
@@ -200,7 +124,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
                   color: "#666",
                   __source: {
                     fileName: _jsxFileName,
-                    lineNumber: 61
+                    lineNumber: 39
                   }
                 });
               },
@@ -208,27 +132,27 @@ __d(function (global, require, module, exports, _dependencyMap) {
                 return _react3.default.createElement(_FontAwesome2.default, {
                   name: "home",
                   size: px2dp(22),
-                  color: "#3496f0",
+                  color: "#da5353",
                   __source: {
                     fileName: _jsxFileName,
-                    lineNumber: 62
+                    lineNumber: 40
                   }
                 });
               },
               onPress: function onPress() {
-                return _this4.setState({
+                return _this2.setState({
                   selectedTab: 'inicial'
                 });
               },
               __source: {
                 fileName: _jsxFileName,
-                lineNumber: 59
+                lineNumber: 37
               }
             },
             _react3.default.createElement(_Home2.default, {
               __source: {
                 fileName: _jsxFileName,
-                lineNumber: 64
+                lineNumber: 42
               }
             })
           ),
@@ -243,7 +167,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
                   color: "#666",
                   __source: {
                     fileName: _jsxFileName,
-                    lineNumber: 68
+                    lineNumber: 46
                   }
                 });
               },
@@ -251,27 +175,27 @@ __d(function (global, require, module, exports, _dependencyMap) {
                 return _react3.default.createElement(_FontAwesome2.default, {
                   name: "bars",
                   size: px2dp(22),
-                  color: "#3496f0",
+                  color: "#da5353",
                   __source: {
                     fileName: _jsxFileName,
-                    lineNumber: 69
+                    lineNumber: 47
                   }
                 });
               },
               onPress: function onPress() {
-                return _this4.setState({
+                return _this2.setState({
                   selectedTab: 'services'
                 });
               },
               __source: {
                 fileName: _jsxFileName,
-                lineNumber: 66
+                lineNumber: 44
               }
             },
             _react3.default.createElement(_Services2.default, {
               __source: {
                 fileName: _jsxFileName,
-                lineNumber: 71
+                lineNumber: 49
               }
             })
           ),
@@ -286,7 +210,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
                   color: "#666",
                   __source: {
                     fileName: _jsxFileName,
-                    lineNumber: 75
+                    lineNumber: 53
                   }
                 });
               },
@@ -294,27 +218,27 @@ __d(function (global, require, module, exports, _dependencyMap) {
                 return _react3.default.createElement(_FontAwesome2.default, {
                   name: "calendar",
                   size: px2dp(22),
-                  color: "#3496f0",
+                  color: "#da5353",
                   __source: {
                     fileName: _jsxFileName,
-                    lineNumber: 76
+                    lineNumber: 54
                   }
                 });
               },
               onPress: function onPress() {
-                return _this4.setState({
+                return _this2.setState({
                   selectedTab: 'scheduling'
                 });
               },
               __source: {
                 fileName: _jsxFileName,
-                lineNumber: 73
+                lineNumber: 51
               }
             },
-            _react3.default.createElement(Scheduling, {
+            _react3.default.createElement(_Scheduling2.default, {
               __source: {
                 fileName: _jsxFileName,
-                lineNumber: 78
+                lineNumber: 56
               }
             })
           ),
@@ -329,7 +253,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
                   color: "#666",
                   __source: {
                     fileName: _jsxFileName,
-                    lineNumber: 82
+                    lineNumber: 60
                   }
                 });
               },
@@ -337,27 +261,27 @@ __d(function (global, require, module, exports, _dependencyMap) {
                 return _react3.default.createElement(_FontAwesome2.default, {
                   name: "envelope",
                   size: px2dp(22),
-                  color: "#3496f0",
+                  color: "#da5353",
                   __source: {
                     fileName: _jsxFileName,
-                    lineNumber: 83
+                    lineNumber: 61
                   }
                 });
               },
               onPress: function onPress() {
-                return _this4.setState({
+                return _this2.setState({
                   selectedTab: 'contact'
                 });
               },
               __source: {
                 fileName: _jsxFileName,
-                lineNumber: 80
+                lineNumber: 58
               }
             },
-            _react3.default.createElement(Contact, {
+            _react3.default.createElement(_Contact2.default, {
               __source: {
                 fileName: _jsxFileName,
-                lineNumber: 85
+                lineNumber: 63
               }
             })
           )

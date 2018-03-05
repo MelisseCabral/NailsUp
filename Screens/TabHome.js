@@ -37,28 +37,28 @@ export default class TabHome extends React.Component {
           <TabNavigator.Item
             selected={this.state.selectedTab === 'inicial'}
             renderIcon={() => <Icon name="home" size={px2dp(22)} color="#666"/>}
-            renderSelectedIcon={() => <Icon name="home" size={px2dp(22)} color="#3496f0"/>}
+            renderSelectedIcon={() => <Icon name="home" size={px2dp(22)} color="#da5353"/>}
             onPress={() => this.setState({ selectedTab: 'inicial' })}>
             <Home />
           </TabNavigator.Item>
           <TabNavigator.Item
             selected={this.state.selectedTab === 'services'}
             renderIcon={() => <Icon name="bars" size={px2dp(22)} color="#666"/>}
-            renderSelectedIcon={() => <Icon name="bars" size={px2dp(22)} color="#3496f0"/>}
+            renderSelectedIcon={() => <Icon name="bars" size={px2dp(22)} color="#da5353"/>}
             onPress={() => this.setState({ selectedTab: 'services' })}>
             <Services />
           </TabNavigator.Item>
           <TabNavigator.Item
             selected={this.state.selectedTab === 'scheduling'}
             renderIcon={() => <Icon name="calendar" size={px2dp(22)} color="#666"/>}
-            renderSelectedIcon={() => <Icon name="calendar" size={px2dp(22)} color="#3496f0"/>}
+            renderSelectedIcon={() => <Icon name="calendar" size={px2dp(22)} color="#da5353"/>}
             onPress={() => this.setState({ selectedTab: 'scheduling' })}>
             <Scheduling />
           </TabNavigator.Item>
           <TabNavigator.Item
             selected={this.state.selectedTab === 'contact'}
             renderIcon={() => <Icon name="envelope" size={px2dp(22)} color="#666"/>}
-            renderSelectedIcon={() => <Icon name="envelope" size={px2dp(22)} color="#3496f0"/>}
+            renderSelectedIcon={() => <Icon name="envelope" size={px2dp(22)} color="#da5353"/>}
             onPress={() => this.setState({ selectedTab: 'contact' })}>
             <Contact />
           </TabNavigator.Item>

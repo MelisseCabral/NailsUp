@@ -132,7 +132,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
                 return _react3.default.createElement(_FontAwesome2.default, {
                   name: "home",
                   size: px2dp(22),
-                  color: "#3496f0",
+                  color: "#da5353",
                   __source: {
                     fileName: _jsxFileName,
                     lineNumber: 40
@@ -175,7 +175,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
                 return _react3.default.createElement(_FontAwesome2.default, {
                   name: "bars",
                   size: px2dp(22),
-                  color: "#3496f0",
+                  color: "#da5353",
                   __source: {
                     fileName: _jsxFileName,
                     lineNumber: 47
@@ -218,7 +218,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
                 return _react3.default.createElement(_FontAwesome2.default, {
                   name: "calendar",
                   size: px2dp(22),
-                  color: "#3496f0",
+                  color: "#da5353",
                   __source: {
                     fileName: _jsxFileName,
                     lineNumber: 54
@@ -261,7 +261,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
                 return _react3.default.createElement(_FontAwesome2.default, {
                   name: "envelope",
                   size: px2dp(22),
-                  color: "#3496f0",
+                  color: "#da5353",
                   __source: {
                     fileName: _jsxFileName,
                     lineNumber: 61

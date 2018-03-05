@@ -8,7 +8,7 @@ export default class Contact extends React.Component {
       return (
         <View style={styles.container}>
           <Text style={styles.welcome}>
-            Serviços
+            Contatos
           </Text>
         </View>
       )

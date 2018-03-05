@@ -1,0 +1,12 @@
+__d(function (global, require, module, exports, _dependencyMap) {
+  module.exports = require(_dependencyMap[0], "react-native/Libraries/Image/AssetRegistry").registerAsset({
+    "__packager_asset": true,
+    "httpServerLocation": "/assets/icons",
+    "width": 256,
+    "height": 167,
+    "scales": [1],
+    "hash": "e1e16e488c3e5d90726e6d08922e26bf",
+    "name": "dtox",
+    "type": "png"
+  });
+});

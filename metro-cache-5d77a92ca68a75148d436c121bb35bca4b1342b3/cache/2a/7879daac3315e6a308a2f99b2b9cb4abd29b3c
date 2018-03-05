@@ -74,159 +74,367 @@ __d(function (global, require, module, exports, _dependencyMap) {
             }
           },
           _react3.default.createElement(
-            _reactNativeMaterialCards.Card,
+            _reactNative.View,
             {
-              style: styles.serviceCard,
+              style: styles.columns,
               __source: {
                 fileName: _jsxFileName,
                 lineNumber: 11
               }
             },
-            _react3.default.createElement(_reactNativeMaterialCards.CardTitle, {
-              title: "This is a title",
-              subtitle: "This is subtitle",
-              __source: {
-                fileName: _jsxFileName,
-                lineNumber: 12
-              }
-            })
-          ),
-          _react3.default.createElement(
-            _reactNativeMaterialCards.Card,
-            {
-              style: styles.serviceCard,
-              __source: {
-                fileName: _jsxFileName,
-                lineNumber: 17
-              }
-            },
-            _react3.default.createElement(_reactNativeMaterialCards.CardContent, {
-              text: "Your device will reboot in few seconds once successful, be patient meanwhile",
-              __source: {
-                fileName: _jsxFileName,
-                lineNumber: 18
-              }
-            }),
             _react3.default.createElement(
-              _reactNativeMaterialCards.CardAction,
+              _reactNative.TouchableHighlight,
               {
-                separator: true,
-                inColumn: false,
+                style: styles.button,
+                onPress: this.onPress,
                 __source: {
                   fileName: _jsxFileName,
-                  lineNumber: 19
+                  lineNumber: 12
                 }
               },
-              _react3.default.createElement(_reactNativeMaterialCards.CardButton, {
-                onPress: function onPress() {},
-                title: "Push",
-                color: "blue",
+              _react3.default.createElement(
+                _reactNative.View,
+                {
+                  style: {
+                    alignItems: 'center',
+                    flexDirection: 'row'
+                  },
+                  __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 16
+                  }
+                },
+                _react3.default.createElement(_reactNative.Image, {
+                  style: styles.icons,
+                  source: require(_dependencyMap[6], '../icons/spray_tan.png'),
+                  __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 17
+                  }
+                }),
+                _react3.default.createElement(
+                  _reactNative.Text,
+                  {
+                    style: styles.thlBox,
+                    __source: {
+                      fileName: _jsxFileName,
+                      lineNumber: 20
+                    }
+                  },
+                  " Bronze"
+                )
+              )
+            ),
+            _react3.default.createElement(
+              _reactNative.TouchableHighlight,
+              {
+                style: styles.button,
+                onPress: this.onPress,
                 __source: {
                   fileName: _jsxFileName,
-                  lineNumber: 22
+                  lineNumber: 23
                 }
-              }),
-              _react3.default.createElement(_reactNativeMaterialCards.CardButton, {
-                onPress: function onPress() {},
-                title: "Later",
-                color: "blue",
+              },
+              _react3.default.createElement(
+                _reactNative.View,
+                {
+                  style: {
+                    alignItems: 'center',
+                    flexDirection: 'row'
+                  },
+                  __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 27
+                  }
+                },
+                _react3.default.createElement(_reactNative.Image, {
+                  style: styles.icons,
+                  source: require(_dependencyMap[7], '../icons/dtox.png'),
+                  __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 28
+                  }
+                }),
+                _react3.default.createElement(
+                  _reactNative.Text,
+                  {
+                    style: styles.thlBox,
+                    __source: {
+                      fileName: _jsxFileName,
+                      lineNumber: 31
+                    }
+                  },
+                  " DTOX"
+                )
+              )
+            ),
+            _react3.default.createElement(
+              _reactNative.TouchableHighlight,
+              {
+                style: styles.button,
+                onPress: this.onPress,
                 __source: {
                   fileName: _jsxFileName,
-                  lineNumber: 27
+                  lineNumber: 34
                 }
-              })
+              },
+              _react3.default.createElement(
+                _reactNative.View,
+                {
+                  style: {
+                    alignItems: 'center',
+                    flexDirection: 'row'
+                  },
+                  __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 38
+                  }
+                },
+                _react3.default.createElement(_reactNative.Image, {
+                  style: styles.icons,
+                  source: require(_dependencyMap[8], '../icons/nails.png'),
+                  __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 39
+                  }
+                }),
+                _react3.default.createElement(
+                  _reactNative.Text,
+                  {
+                    style: styles.thlBox,
+                    __source: {
+                      fileName: _jsxFileName,
+                      lineNumber: 42
+                    }
+                  },
+                  " Unhas"
+                )
+              )
+            ),
+            _react3.default.createElement(
+              _reactNative.TouchableHighlight,
+              {
+                style: styles.button,
+                onPress: this.onPress,
+                __source: {
+                  fileName: _jsxFileName,
+                  lineNumber: 45
+                }
+              },
+              _react3.default.createElement(
+                _reactNative.View,
+                {
+                  style: {
+                    alignItems: 'center',
+                    flexDirection: 'row'
+                  },
+                  __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 49
+                  }
+                },
+                _react3.default.createElement(_reactNative.Image, {
+                  style: styles.icons,
+                  source: require(_dependencyMap[9], '../icons/waxing.png'),
+                  __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 50
+                  }
+                }),
+                _react3.default.createElement(
+                  _reactNative.Text,
+                  {
+                    style: styles.thlBox,
+                    __source: {
+                      fileName: _jsxFileName,
+                      lineNumber: 53
+                    }
+                  },
+                  " Depila\xE7\xE3o"
+                )
+              )
             )
           ),
           _react3.default.createElement(
-            _reactNativeMaterialCards.Card,
+            _reactNative.View,
             {
-              style: styles.serviceCard,
+              style: styles.columns,
               __source: {
                 fileName: _jsxFileName,
-                lineNumber: 34
+                lineNumber: 57
               }
             },
-            _react3.default.createElement(_reactNativeMaterialCards.CardContent, {
-              text: "Your device will reboot in few seconds once successful, be patient meanwhile",
-              __source: {
-                fileName: _jsxFileName,
-                lineNumber: 35
-              }
-            }),
             _react3.default.createElement(
-              _reactNativeMaterialCards.CardAction,
+              _reactNative.TouchableHighlight,
               {
-                separator: true,
-                inColumn: false,
+                style: styles.button,
+                onPress: this.onPress,
                 __source: {
                   fileName: _jsxFileName,
-                  lineNumber: 36
+                  lineNumber: 58
                 }
               },
-              _react3.default.createElement(_reactNativeMaterialCards.CardButton, {
-                onPress: function onPress() {},
-                title: "Push",
-                color: "blue",
-                __source: {
-                  fileName: _jsxFileName,
-                  lineNumber: 39
-                }
-              }),
-              _react3.default.createElement(_reactNativeMaterialCards.CardButton, {
-                onPress: function onPress() {},
-                title: "Later",
-                color: "blue",
-                __source: {
-                  fileName: _jsxFileName,
-                  lineNumber: 44
-                }
-              })
-            )
-          ),
-          _react3.default.createElement(
-            _reactNativeMaterialCards.Card,
-            {
-              style: styles.serviceCard,
-              __source: {
-                fileName: _jsxFileName,
-                lineNumber: 51
-              }
-            },
-            _react3.default.createElement(_reactNativeMaterialCards.CardContent, {
-              text: "Your device will reboot in few seconds once successful, be patient meanwhile",
-              __source: {
-                fileName: _jsxFileName,
-                lineNumber: 52
-              }
-            }),
+              _react3.default.createElement(
+                _reactNative.View,
+                {
+                  style: {
+                    alignItems: 'center',
+                    flexDirection: 'row'
+                  },
+                  __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 62
+                  }
+                },
+                _react3.default.createElement(_reactNative.Image, {
+                  style: styles.icons,
+                  source: require(_dependencyMap[10], '../icons/eyes.png'),
+                  __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 63
+                  }
+                }),
+                _react3.default.createElement(
+                  _reactNative.Text,
+                  {
+                    style: styles.thlBox,
+                    __source: {
+                      fileName: _jsxFileName,
+                      lineNumber: 66
+                    }
+                  },
+                  " Olhos"
+                )
+              )
+            ),
             _react3.default.createElement(
-              _reactNativeMaterialCards.CardAction,
+              _reactNative.TouchableHighlight,
               {
-                separator: true,
-                inColumn: false,
+                style: styles.button,
+                onPress: this.onPress,
                 __source: {
                   fileName: _jsxFileName,
-                  lineNumber: 53
+                  lineNumber: 69
                 }
               },
-              _react3.default.createElement(_reactNativeMaterialCards.CardButton, {
-                onPress: function onPress() {},
-                title: "Push",
-                color: "blue",
+              _react3.default.createElement(
+                _reactNative.View,
+                {
+                  style: {
+                    alignItems: 'center',
+                    flexDirection: 'row'
+                  },
+                  __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 73
+                  }
+                },
+                _react3.default.createElement(_reactNative.Image, {
+                  style: styles.icons,
+                  source: require(_dependencyMap[11], '../icons/make_up.png'),
+                  __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 74
+                  }
+                }),
+                _react3.default.createElement(
+                  _reactNative.Text,
+                  {
+                    style: styles.thlBox,
+                    __source: {
+                      fileName: _jsxFileName,
+                      lineNumber: 77
+                    }
+                  },
+                  " Maquiagem"
+                )
+              )
+            ),
+            _react3.default.createElement(
+              _reactNative.TouchableHighlight,
+              {
+                style: styles.button,
+                onPress: this.onPress,
                 __source: {
                   fileName: _jsxFileName,
-                  lineNumber: 56
+                  lineNumber: 80
                 }
-              }),
-              _react3.default.createElement(_reactNativeMaterialCards.CardButton, {
-                onPress: function onPress() {},
-                title: "Later",
-                color: "blue",
+              },
+              _react3.default.createElement(
+                _reactNative.View,
+                {
+                  style: {
+                    alignItems: 'center',
+                    flexDirection: 'row'
+                  },
+                  __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 84
+                  }
+                },
+                _react3.default.createElement(_reactNative.Image, {
+                  style: styles.icons,
+                  source: require(_dependencyMap[12], '../icons/massage.png'),
+                  __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 85
+                  }
+                }),
+                _react3.default.createElement(
+                  _reactNative.Text,
+                  {
+                    style: styles.thlBox,
+                    __source: {
+                      fileName: _jsxFileName,
+                      lineNumber: 88
+                    }
+                  },
+                  " Massagem"
+                )
+              )
+            ),
+            _react3.default.createElement(
+              _reactNative.TouchableHighlight,
+              {
+                style: styles.button,
+                onPress: this.onPress,
                 __source: {
                   fileName: _jsxFileName,
-                  lineNumber: 61
+                  lineNumber: 91
                 }
-              })
+              },
+              _react3.default.createElement(
+                _reactNative.View,
+                {
+                  style: {
+                    alignItems: 'center',
+                    flexDirection: 'row'
+                  },
+                  __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 95
+                  }
+                },
+                _react3.default.createElement(_reactNative.Image, {
+                  style: styles.icons,
+                  source: require(_dependencyMap[13], '../icons/packages.png'),
+                  __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 96
+                  }
+                }),
+                _react3.default.createElement(
+                  _reactNative.Text,
+                  {
+                    style: styles.thlBox,
+                    __source: {
+                      fileName: _jsxFileName,
+                      lineNumber: 99
+                    }
+                  },
+                  " Pacotes"
+                )
+              )
             )
           )
         );
@@ -240,10 +448,10 @@ __d(function (global, require, module, exports, _dependencyMap) {
 
   var styles = _reactNative.StyleSheet.create({
     container: {
+      justifyContent: 'center',
+      flexDirection: 'row',
       flex: 1,
-      backgroundColor: '#da5353',
-      alignItems: 'center',
-      justifyContent: 'center'
+      backgroundColor: '#da5353'
     },
     alignRight: {
       marginTop: 20,
@@ -258,12 +466,28 @@ __d(function (global, require, module, exports, _dependencyMap) {
       width: 250
     },
     button: {
-      color: "#3496f0",
-      margin: 20
+      backgroundColor: "#fff",
+      justifyContent: 'center',
+      alignItems: 'center',
+      width: 160,
+      margin: 5,
+      height: 125,
+      borderRadius: 5
     },
-    slide: {},
+    columns: {
+      marginTop: 30
+    },
     serviceCard: {
-      height: 60
+      height: 60,
+      width: 160
+    },
+    thlBox: {
+      color: '#c48c3a'
+    },
+    icons: {
+      width: 30,
+      height: 30,
+      resizeMode: 'contain'
     }
   });
 });
