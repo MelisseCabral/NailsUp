@@ -6,7 +6,7 @@ import {Dimensions} from 'react-native';
 import { StackNavigator} from 'react-navigation';
 
 import Home from './Home';
-import Services from './Services';
+import StackServices from './StackServices';
 import Scheduling from './Scheduling';
 import Contact from './Contact';
 
@@ -46,7 +46,7 @@ export default class TabHome extends React.Component {
             renderIcon={() => <Icon name="bars" size={px2dp(22)} color="#666"/>}
             renderSelectedIcon={() => <Icon name="bars" size={px2dp(22)} color="#da5353"/>}
             onPress={() => this.setState({ selectedTab: 'services' })}>
-            <Services />
+            <StackServices />
           </TabNavigator.Item>
           <TabNavigator.Item
             selected={this.state.selectedTab === 'scheduling'}
