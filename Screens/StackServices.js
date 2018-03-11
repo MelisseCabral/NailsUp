@@ -16,7 +16,8 @@ const StackServices = StackNavigator(
       navigationOptions: ({navigation}) => ({
         title: '', 
         header: null
-    })
+      })
+
     },    
   },
   { 

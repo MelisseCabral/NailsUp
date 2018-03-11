@@ -4,6 +4,10 @@ import Icon from 'react-native-vector-icons/FontAwesome';
 import { StackNavigator} from 'react-navigation';
 
 export default class Services extends React.Component {
+
+  constructor() {
+    super();
+  }
     render() {
 
       const {navigate} = this.props.navigation;
@@ -81,7 +85,7 @@ export default class Services extends React.Component {
           </TouchableHighlight>
           <TouchableHighlight
           style={styles.button}
-          onPress={() => navigate('ServicesByCategory', {category: 'Massagem'})}
+          onPress={() => navigate('ServiceByCategory', {category: 'Unhas', props: this.props.navigation})}
           >
             <View style={{alignItems: 'center', flexDirection:'row'}}>
               <Image 
