@@ -22,6 +22,7 @@ export default class Services extends React.Component {
         <View style={styles.columns}>
           <TouchableHighlight
           style={styles.button}
+          underlayColor='transparent'
           onPress={() => navigate('ServiceByCategory', {category: 'Bronzeamento', props: this.props.navigation})}
           >
             <View style={{alignItems: 'center', flexDirection:'row'}}>
@@ -33,6 +34,7 @@ export default class Services extends React.Component {
           </TouchableHighlight>
           <TouchableHighlight
           style={styles.button}
+          underlayColor='transparent'
           onPress={() => navigate('ServiceByCategory', {category: 'Detox', props: this.props.navigation})}
           >
             <View style={{alignItems: 'center', flexDirection:'row'}}>
@@ -44,6 +46,7 @@ export default class Services extends React.Component {
           </TouchableHighlight>
           <TouchableHighlight
           style={styles.button}
+          underlayColor='transparent'
           onPress={() => navigate('ServiceByCategory', {category: 'Unhas', props: this.props.navigation})}
           >
             <View style={{alignItems: 'center', flexDirection:'row'}}>
@@ -55,6 +58,7 @@ export default class Services extends React.Component {
           </TouchableHighlight>
           <TouchableHighlight
           style={styles.button}
+          underlayColor='transparent'
           onPress={() => navigate('ServiceByCategory', {category: 'Depilação', props: this.props.navigation})}
           >
             <View style={{alignItems: 'center', flexDirection:'row'}}>
@@ -68,6 +72,7 @@ export default class Services extends React.Component {
         <View style={styles.columns}>
           <TouchableHighlight
           style={styles.button}
+          underlayColor='transparent'
           onPress={() => navigate('ServiceByCategory', {category: 'Olhos', props: this.props.navigation})}
           >
             <View style={{alignItems: 'center', flexDirection:'row'}}>
@@ -79,6 +84,7 @@ export default class Services extends React.Component {
           </TouchableHighlight>
           <TouchableHighlight
           style={styles.button}
+          underlayColor='transparent'
           onPress={() => navigate('ServiceByCategory', {category: 'Maquiagem', props: this.props.navigation})}
           >
             <View style={{alignItems: 'center', flexDirection:'row'}}>
@@ -90,6 +96,7 @@ export default class Services extends React.Component {
           </TouchableHighlight>
           <TouchableHighlight
           style={styles.button}
+          underlayColor='transparent'
           onPress={() => navigate('ServiceByCategory', {category: 'Unhas', props: this.props.navigation})}
           >
             <View style={{alignItems: 'center', flexDirection:'row'}}>
@@ -101,6 +108,7 @@ export default class Services extends React.Component {
           </TouchableHighlight>
           <TouchableHighlight
           style={styles.button}
+          underlayColor='transparent'
           onPress={() => navigate('ServiceByCategory', {category: 'Pacotes', props: this.props.navigation})}
           >
             <View style={{alignItems: 'center', flexDirection:'row'}}>

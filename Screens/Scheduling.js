@@ -35,6 +35,7 @@ export default class Scheduling extends React.Component {
                         </View>
                         <View style={styles.columns}>
                             <TouchableHighlight style={styles.alignRight}
+                            underlayColor='transparent'
                             onPress={() => showMessage('Serviço removido com sucesso!')}>
                                 <Icon name="trash" size={25} style={styles.icons} color="#da5353"/>
                             </TouchableHighlight>

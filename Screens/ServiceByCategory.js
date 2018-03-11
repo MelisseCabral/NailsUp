@@ -41,6 +41,7 @@ export default class ServiceByCategory extends React.Component {
                   </View>
                   <View style={styles.columns}>
                     <TouchableHighlight style={styles.alignRight}
+                    underlayColor='transparent'
                     onPress={() => showMessage('Serviço adicionado com sucesso!')}>
                         <Icon name="plus-circle" size={25} style={styles.icons} color="#da5353"/>
                     </TouchableHighlight>
