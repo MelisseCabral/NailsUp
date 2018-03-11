@@ -63,6 +63,7 @@ export default class TabHome extends React.Component {
             <Contact />
           </TabNavigator.Item>
         </TabNavigator>
+        
       );
     }
   }

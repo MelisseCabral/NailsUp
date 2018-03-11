@@ -136,7 +136,7 @@ export default class Services extends React.Component {
       backgroundColor: "#fff",
       justifyContent: 'center', 
       alignItems: 'center',
-      width: (width - 30) / 2,
+      width: (width - 20) / 2,
       margin: 5,
       height: (height - 125) / 4,
       borderRadius: 5,

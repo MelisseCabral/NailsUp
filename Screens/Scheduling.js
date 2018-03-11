@@ -4,6 +4,7 @@ import TabNavigator from 'react-native-tab-navigator';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import {Dimensions} from 'react-native';
 import { StackNavigator} from 'react-navigation';
+import { showMessage, MessageBar } from 'react-native-messages';
 
 var { width, height } = Dimensions.get('window');
 
@@ -33,7 +34,8 @@ export default class Scheduling extends React.Component {
                             </View>
                         </View>
                         <View style={styles.columns}>
-                            <TouchableHighlight style={styles.alignRight}>
+                            <TouchableHighlight style={styles.alignRight}
+                            onPress={() => showMessage('Serviço removido com sucesso!')}>
                                 <Icon name="trash" size={25} style={styles.icons} color="#da5353"/>
                             </TouchableHighlight>
                         </View>
@@ -44,6 +46,7 @@ export default class Scheduling extends React.Component {
             <View style={styles.containerPrice}>
                 <Text style={styles.textPrice}> R$ </Text>
             </View>
+            <MessageBar />
         </View>
       )
     }

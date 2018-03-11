@@ -3,6 +3,8 @@ import { StyleSheet, Text, View, TextInput, Button, ScrollView, ImageBackground,
 import Icon from 'react-native-vector-icons/FontAwesome';
 import { StackNavigator} from 'react-navigation';
 import {Dimensions} from 'react-native';
+import { showMessage, MessageBar } from 'react-native-messages';
+
 
 var { width, height } = Dimensions.get('window');
 
@@ -38,13 +40,16 @@ export default class ServiceByCategory extends React.Component {
                     </View>
                   </View>
                   <View style={styles.columns}>
-                    <TouchableHighlight style={styles.alignRight}>
+                    <TouchableHighlight style={styles.alignRight}
+                    onPress={() => showMessage('Serviço adicionado com sucesso!')}>
                         <Icon name="plus-circle" size={25} style={styles.icons} color="#da5353"/>
                     </TouchableHighlight>
                   </View>
               </View>                  
           </ScrollView>
+          <MessageBar />
       </View>
+                
     )
   }
 }
@@ -99,6 +104,6 @@ export default class ServiceByCategory extends React.Component {
       marginBottom: 3
     },
     icons: {
-      paddingLeft: 220,
+      marginLeft: 220,
     }
   });
