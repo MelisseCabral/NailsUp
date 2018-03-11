@@ -3,6 +3,11 @@ import { StyleSheet, Text, View, TextInput, Button, TouchableHighlight, Image } 
 import Icon from 'react-native-vector-icons/FontAwesome';
 import { StackNavigator} from 'react-navigation';
 
+var Dimensions = require('Dimensions');
+
+// We can use this to make the overlay fill the entire width
+var { width, height } = Dimensions.get('window');
+
 export default class Services extends React.Component {
 
   constructor() {
@@ -127,17 +132,13 @@ export default class Services extends React.Component {
     welcome:{
       marginBottom: 20
     },
-    textinput: {
-      height: 40, 
-      width: 250
-    },
     button: {
       backgroundColor: "#fff",
       justifyContent: 'center', 
       alignItems: 'center',
-      width: 160,
+      width: (width - 30) / 2,
       margin: 5,
-      height: 125,
+      height: (height - 125) / 4,
       borderRadius: 5,
     },
     columns: {

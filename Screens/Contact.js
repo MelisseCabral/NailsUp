@@ -3,6 +3,11 @@ import { StyleSheet, Text, View, TextInput, Button, AppRegistry, Image , Touchab
 import Icon from 'react-native-vector-icons/FontAwesome';
 import { StackNavigator} from 'react-navigation';
 
+var Dimensions = require('Dimensions');
+
+// We can use this to make the overlay fill the entire width
+var { width, height } = Dimensions.get('window');
+
 export default class Contact extends React.Component {
     render() {
       return (
@@ -77,7 +82,7 @@ export default class Contact extends React.Component {
       alignItems: 'center',
       width: 350,
       margin: 5,
-      height: 125,
+      height: (height - 125) / 4,
       borderRadius: 5,
     },
     columns: {
@@ -87,6 +92,6 @@ export default class Contact extends React.Component {
       color: '#c48c3a'
     },
     icons: {
-      padding: 20
+      padding: 15
     }
   });

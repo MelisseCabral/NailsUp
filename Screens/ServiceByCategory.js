@@ -2,6 +2,9 @@ import React from 'react';
 import { StyleSheet, Text, View, TextInput, Button, ScrollView, ImageBackground, TouchableHighlight } from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import { StackNavigator} from 'react-navigation';
+import {Dimensions} from 'react-native';
+
+var { width, height } = Dimensions.get('window');
 
 export default class ServiceByCategory extends React.Component {
 
@@ -56,8 +59,8 @@ export default class ServiceByCategory extends React.Component {
       flexDirection: 'row', 
       flex: 1,
       backgroundColor: "#fff",
-      width: 350,
-      margin: 5,
+      width: width - 20,
+      margin: 10,
       height: 80,
       borderRadius: 5,
     },
@@ -79,7 +82,7 @@ export default class ServiceByCategory extends React.Component {
 
     },
     imgBg: {
-        width: 360, 
+        width: width, 
         height: 170, 
         justifyContent:'flex-end'
     },

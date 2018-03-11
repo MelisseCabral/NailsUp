@@ -5,6 +5,9 @@ import Icon from 'react-native-vector-icons/FontAwesome';
 import {Dimensions} from 'react-native';
 import { StackNavigator} from 'react-navigation';
 
+var { width, height } = Dimensions.get('window');
+
+
 export default class Scheduling extends React.Component {
     render() {
       return (
@@ -56,8 +59,8 @@ export default class Scheduling extends React.Component {
         flexDirection: 'row', 
         flex: 1,
         backgroundColor: "#fff",
-        width: 350,
-        margin: 5,
+        width: width - 20,
+        margin: 10,
         height: 80,
         borderRadius: 5,
         },
@@ -78,7 +81,7 @@ export default class Scheduling extends React.Component {
         fontWeight: 'bold'
     },
     imgBg: {
-        width: 360, 
+        width: width, 
         height: 170, 
         justifyContent:'flex-end'
     },
@@ -106,12 +109,12 @@ export default class Scheduling extends React.Component {
 
     },
     imgBg: {
-        width: 360, 
+        width: width, 
         height: 170, 
         justifyContent:'flex-end'
     },
     containerPrice: {
-        width: 360, 
+        width: width, 
         height: 25, 
         justifyContent:'center', 
         backgroundColor: '#fff', 
