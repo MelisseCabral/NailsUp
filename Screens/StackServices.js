@@ -21,8 +21,7 @@ const StackServices = StackNavigator(
     },    
   },
   { 
-    headerMode: 'screen',
-    header: { visible:false },
+    headerMode: 'none'
   }
 );
 export default StackServices;

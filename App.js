@@ -15,8 +15,7 @@ const App = StackNavigator(
     },    
   },
   { 
-    headerMode: 'screen',
-    header: { visible:false },
+    headerMode: 'screen'
   }
 );
 export default App;

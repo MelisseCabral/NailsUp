@@ -5,39 +5,38 @@ import { StackNavigator} from 'react-navigation';
 
 export default class ServiceByCategory extends React.Component {
 
-  static navigationOptions = ({ navigation }) => ({
-    title: ``,
-    header: {
-      visible: true
-    }
+  static navigationOptions = ({ navigation, screenProps }) => ({
+    title: "Login Page",
+    headerMode: 'screen'
   });
-    render() {
-      const {params} = this.props.navigation.state;
-      const category  = params ? params.category : null
 
-      return (
-          <View style={styles.container}>
-            <ScrollView>
-                <View style={styles.container}>
-                    <ImageBackground
-                    style={styles.imgBg}
-                    source={{uri: 'https://www.w3schools.com/w3css/img_fjords.jpg'}}
-                    >
-                    <Text style={styles.welcome}>
-                      {category}
-                    </Text>
-                    </ImageBackground>
-                </View>
-                <View> 
-                    <Text style={{fontSize:96}}>Scroll me plz</Text>
-                    <Text style={{fontSize:96}}>If you like</Text>
-                    <Text style={{fontSize:96}}>Scrolling down</Text>                    
-                </View>
-            </ScrollView>
-        </View>
-      )
-    }
+  render() {
+    const {params} = this.props.navigation.state;
+    const category  = params ? params.category : null
+
+    return (
+        <View style={styles.container}>
+          <ScrollView>
+              <View style={styles.container}>
+                  <ImageBackground
+                  style={styles.imgBg}
+                  source={{uri: 'https://www.w3schools.com/w3css/img_fjords.jpg'}}
+                  >
+                  <Text style={styles.welcome}>
+                    {category}
+                  </Text>
+                  </ImageBackground>
+              </View>
+              <View> 
+                  <Text style={{fontSize:96}}>Scroll me plz</Text>
+                  <Text style={{fontSize:96}}>If you like</Text>
+                  <Text style={{fontSize:96}}>Scrolling down</Text>                    
+              </View>
+          </ScrollView>
+      </View>
+    )
   }
+}
   
   const styles = StyleSheet.create({
     container: {

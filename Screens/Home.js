@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, Text, View, Button, Image } from 'react-native';
+import { StyleSheet, Text, View, Button, ImageBackground } from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import { StackNavigator} from 'react-navigation';
 import Swiper from 'react-native-swiper';
@@ -8,15 +8,21 @@ export default class Home extends React.Component {
     render() {
       return (
         <Swiper style={styles.wrapper} showsButtons={false}>
-        <View style={styles.slide1}>
-          <Text style={styles.text}>Hello Swiper</Text>
-        </View>
-        <View style={styles.slide2}>
-          <Text style={styles.text}>Beautiful</Text>
-        </View>
-        <View style={styles.slide3}>
-          <Text style={styles.text}>And simple</Text>
-        </View>
+          <ImageBackground
+          source={require('./../images/slider_10.png')}
+          style={styles.slide1}>
+            <Text style={styles.text}>Hello Swiper</Text>
+          </ImageBackground>
+          <ImageBackground
+          source={require('./../images/slider_6.png')}
+          style={styles.slide1}>
+            <Text style={styles.text}>Beautiful</Text>
+          </ImageBackground>
+          <ImageBackground
+          source={require('./../images/slider_1.png')}
+          style={styles.slide1}>
+            <Text style={styles.text}>And simple</Text>
+          </ImageBackground>
       </Swiper>
       )
     }
@@ -46,5 +52,6 @@ export default class Home extends React.Component {
       color: '#fff',
       fontSize: 30,
       fontWeight: 'bold',
-    }
+    },
+    
   });

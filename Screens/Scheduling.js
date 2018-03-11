@@ -14,7 +14,7 @@ export default class Scheduling extends React.Component {
                 <View style={styles.container}>
                     <ImageBackground
                     style={styles.imgBg}
-                    source={{uri: 'https://www.w3schools.com/w3css/img_fjords.jpg'}}
+                    source={require('./../images/make.jpg')}
                     >
                     <Text style={styles.welcome}>
                         Agende agora!
