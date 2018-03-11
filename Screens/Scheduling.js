@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, Text, View, TextInput, Button, AppRegistry, Image,ImageBackground, ScrollView } from 'react-native';
+import { StyleSheet, Text, View, TextInput, Button, AppRegistry, Image,ImageBackground, ScrollView, TouchableHighlight } from 'react-native';
 import TabNavigator from 'react-native-tab-navigator';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import {Dimensions} from 'react-native';
@@ -22,12 +22,19 @@ export default class Scheduling extends React.Component {
                     </ImageBackground>
                 </View>
                 <View> 
-                    <Text style={{fontSize:96}}>Scroll me plz</Text>
-                    <Text style={{fontSize:96}}>If you like</Text>
-                    <Text style={{fontSize:96}}>Scrolling down</Text>
-                    <Text style={{fontSize:96}}>What's the best</Text>
-                    <Text style={{fontSize:96}}>Framework around?</Text>
-                    <Text style={{fontSize:80}}>React Native</Text>
+                    <View style={styles.containerCard}>
+                        <View style={styles.columns}>
+                            <View style={styles.alignLeft}>
+                                <Text style={styles.titleBox}> Serviço</Text>
+                                <Text style={styles.thlBox}> Descrição</Text>  
+                            </View>
+                        </View>
+                        <View style={styles.columns}>
+                            <TouchableHighlight style={styles.alignRight}>
+                                <Icon name="trash" size={25} style={styles.icons} color="#da5353"/>
+                            </TouchableHighlight>
+                        </View>
+                    </View>     
                     
                 </View>
             </ScrollView>
@@ -41,28 +48,62 @@ export default class Scheduling extends React.Component {
 
   const styles = StyleSheet.create({
     container: {
-      flex: 1,
-      backgroundColor: '#da5353',
-      alignItems: 'center',
+        flex: 1,
+        backgroundColor: '#da5353',
+        alignItems: 'center',
     },
+    containerCard: {
+        flexDirection: 'row', 
+        flex: 1,
+        backgroundColor: "#fff",
+        width: 350,
+        margin: 5,
+        height: 80,
+        borderRadius: 5,
+        },
     alignRight: {
-      marginTop: 20,
-      marginRight: 60,
-      alignSelf: 'flex-end',
+        marginTop: 20,
+        marginRight: 10,
+        justifyContent:'flex-end',
+        alignSelf: 'flex-end',
+    },
+    alignLeft: {
+        marginLeft: 20,
+        justifyContent:'center',
+        alignSelf: 'flex-start',
     },
     welcome:{
-      margin: 20,
-      color: '#fff',
-
-
+        margin: 20,
+        color: '#fff',
+        fontWeight: 'bold'
+    },
+    imgBg: {
+        width: 360, 
+        height: 170, 
+        justifyContent:'flex-end'
+    },
+    columns: {
+        marginTop: 5
+    },
+    thlBox: {
+        color: '#c48c3a'
+    },
+    titleBox: {
+        color: '#c48c3a',
+        fontWeight: 'bold',
+        paddingTop: 3,
+        marginBottom: 3
+    },
+    icons: {
+        paddingLeft: 220,
     },
     textPrice: {
         color: '#da5353'
     },
     button: {
-      color: "#3496f0",
-      margin: 20,
-      
+        color: "#3496f0",
+        margin: 20,
+
     },
     imgBg: {
         width: 360, 
@@ -75,5 +116,5 @@ export default class Scheduling extends React.Component {
         justifyContent:'center', 
         backgroundColor: '#fff', 
         paddingLeft:10
-    }
+    }   
   });

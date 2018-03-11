@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, Text, View, TextInput, Button, ScrollView, ImageBackground } from 'react-native';
+import { StyleSheet, Text, View, TextInput, Button, ScrollView, ImageBackground, TouchableHighlight } from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import { StackNavigator} from 'react-navigation';
 
@@ -27,11 +27,19 @@ export default class ServiceByCategory extends React.Component {
                   </Text>
                   </ImageBackground>
               </View>
-              <View> 
-                  <Text style={{fontSize:96}}>Scroll me plz</Text>
-                  <Text style={{fontSize:96}}>If you like</Text>
-                  <Text style={{fontSize:96}}>Scrolling down</Text>                    
-              </View>
+              <View style={styles.containerCard}>
+                  <View style={styles.columns}>
+                    <View style={styles.alignLeft}>
+                        <Text style={styles.titleBox}> Serviço</Text>
+                        <Text style={styles.thlBox}> Descrição</Text>  
+                    </View>
+                  </View>
+                  <View style={styles.columns}>
+                    <TouchableHighlight style={styles.alignRight}>
+                        <Icon name="plus-circle" size={25} style={styles.icons} color="#da5353"/>
+                    </TouchableHighlight>
+                  </View>
+              </View>                  
           </ScrollView>
       </View>
     )
@@ -44,10 +52,25 @@ export default class ServiceByCategory extends React.Component {
       backgroundColor: '#da5353',
       alignItems: 'center',
     },
+    containerCard: {
+      flexDirection: 'row', 
+      flex: 1,
+      backgroundColor: "#fff",
+      width: 350,
+      margin: 5,
+      height: 80,
+      borderRadius: 5,
+    },
     alignRight: {
       marginTop: 20,
-      marginRight: 60,
+      marginRight: 10,
+      justifyContent:'flex-end',
       alignSelf: 'flex-end',
+    },
+    alignLeft: {
+      marginLeft: 20,
+      justifyContent:'center',
+      alignSelf: 'flex-start',
     },
     welcome:{
       margin: 20,
@@ -55,17 +78,24 @@ export default class ServiceByCategory extends React.Component {
 
 
     },
-    textPrice: {
-        color: '#da5353'
-    },
-    button: {
-      color: "#3496f0",
-      margin: 20,
-      
-    },
     imgBg: {
         width: 360, 
         height: 170, 
         justifyContent:'flex-end'
+    },
+    columns: {
+      marginTop: 5
+    },
+    thlBox: {
+      color: '#c48c3a'
+    },
+    titleBox: {
+      color: '#c48c3a',
+      fontWeight: 'bold',
+      paddingTop: 3,
+      marginBottom: 3
+    },
+    icons: {
+      paddingLeft: 220,
     }
   });

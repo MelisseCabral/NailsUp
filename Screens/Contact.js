@@ -7,49 +7,49 @@ export default class Contact extends React.Component {
     render() {
       return (
         <View style={styles.container}>
-        <View style={styles.columns}>
-          <TouchableHighlight
-          style={styles.button}
-          onPress={this.onPress}
-          >
-            <View style={{alignItems: 'center'}}>
-              <Text style={styles.thlBox}> Deseja falar por telefone?</Text>  
-              <Icon name="phone" size={25} style={styles.icons} color="#da5353"/>
-              <Text style={styles.thlBox}> (61) 9917-1955</Text>  
-            </View>
-          </TouchableHighlight>
-          <TouchableHighlight
-          style={styles.button}
-          onPress={this.onPress}
-          >
-            <View style={{alignItems: 'center'}}>
-              <Text style={styles.thlBox}> Indique e ganhe descontos</Text>  
-              <Icon name="share-alt" size={25} style={styles.icons} color="#da5353"/>
-              <Text style={styles.thlBox}> www.nailsup.com.br</Text>  
-            </View>
-          </TouchableHighlight>
-          <TouchableHighlight
-          style={styles.button}
-          onPress={this.onPress}
-          >
-            <View style={{alignItems: 'center'}}>
-              <Text style={styles.thlBox}> Deseja saber algo?</Text>  
-              <Icon name="comments" size={25}  style={styles.icons} color="#da5353"/>
-              <Text style={styles.thlBox}> info@nailsup.com.br</Text>  
-            </View>
-          </TouchableHighlight>
-          <TouchableHighlight
-          style={styles.button}
-          onPress={this.onPress}
-          >
-            <View style={{alignItems: 'center'}}>
-              <Text style={styles.thlBox}> Aconteceu alguma coisa?</Text> 
-              <Text style={styles.thlBox}> Conte para que possamos resolver.</Text> 
-              <Icon name="envelope" size={25} style={styles.icons} color="#da5353"/>
-              <Text style={styles.thlBox}> help@nailsup.com.br</Text>  
-            </View>
-          </TouchableHighlight>
-        </View>
+          <View style={styles.columns}>
+            <TouchableHighlight
+            style={styles.button}
+            onPress={this.onPress}
+            >
+              <View style={{alignItems: 'center'}}>
+                <Text style={styles.thlBox}> Deseja falar por telefone?</Text>  
+                <Icon name="phone" size={25} style={styles.icons} color="#c48c3a"/>
+                <Text style={styles.thlBox}> (61) 9917-1955</Text>  
+              </View>
+            </TouchableHighlight>
+            <TouchableHighlight
+            style={styles.button}
+            onPress={this.onPress}
+            >
+              <View style={{alignItems: 'center'}}>
+                <Text style={styles.thlBox}> Indique e ganhe descontos</Text>  
+                <Icon name="share-alt" size={25} style={styles.icons} color="#c48c3a"/>
+                <Text style={styles.thlBox}> www.nailsup.com.br</Text>  
+              </View>
+            </TouchableHighlight>
+            <TouchableHighlight
+            style={styles.button}
+            onPress={this.onPress}
+            >
+              <View style={{alignItems: 'center'}}>
+                <Text style={styles.thlBox}> Deseja saber algo?</Text>  
+                <Icon name="comments" size={25}  style={styles.icons} color="#c48c3a"/>
+                <Text style={styles.thlBox}> info@nailsup.com.br</Text>  
+              </View>
+            </TouchableHighlight>
+            <TouchableHighlight
+            style={styles.button}
+            onPress={this.onPress}
+            >
+              <View style={{alignItems: 'center'}}>
+                <Text style={styles.thlBox}> Aconteceu alguma coisa?</Text> 
+                <Text style={styles.thlBox}> Conte para que possamos resolver.</Text> 
+                <Icon name="envelope" size={25} style={styles.icons} color="#c48c3a"/>
+                <Text style={styles.thlBox}> help@nailsup.com.br</Text>  
+              </View>
+            </TouchableHighlight>
+          </View>
       </View>
       )
     }
