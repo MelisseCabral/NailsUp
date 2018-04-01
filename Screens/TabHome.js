@@ -7,6 +7,7 @@ import { StackNavigator} from 'react-navigation';
 
 import Home from './Home';
 import StackServices from './StackServices';
+import StackScheduling from './StackScheduling';
 import Scheduling from './Scheduling';
 import Contact from './Contact';
 
@@ -53,7 +54,7 @@ export default class TabHome extends React.Component {
             renderIcon={() => <Icon name="calendar" size={px2dp(22)} color="#666"/>}
             renderSelectedIcon={() => <Icon name="calendar" size={px2dp(22)} color="#da5353"/>}
             onPress={() => this.setState({ selectedTab: 'scheduling' })}>
-            <Scheduling />
+            <StackScheduling />
           </TabNavigator.Item>
           <TabNavigator.Item
             selected={this.state.selectedTab === 'contact'}

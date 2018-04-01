@@ -10,44 +10,44 @@ var categore;
 var photo;
 
 //This class implements all the definition of service and his behavior
-export default class Service {
-    constructor(nName, nDescription, nPrice, nCategore){
-        id= name.hash();
+class Service {
+    constructor(nName, nDescription, nPrice, nCategore) {
+        id = name.hash();
         name = nName;
         description = nDescription;
         price = nPrice;
         categore = nCategore;
     }
     //Change name of service
-    setName(newName){
+    setName(newName) {
         name = newName;
     }
     //Change Description
-    setDescription(newDesc){
+    setDescription(newDesc) {
         description = newDesc;
     }
     //Change price
-    setPrice(newPrice){
+    setPrice(newPrice) {
         price = newPrice;
     }
     //Change categore
-    setCategore(newCategore){
+    setCategore(newCategore) {
         categore = newCategore;
     }
     //Return name
-    getName(){
+    getName() {
         return name;
     }
     //Return description
-    getDescription(){
+    getDescription() {
         return description;
     }
     //Return price
-    setPrice(){
+    setPrice() {
         return price;
     }
     //return categore
-    setCategore(){
+    setCategore() {
         return categore;
     }
 }

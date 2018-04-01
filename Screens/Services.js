@@ -1,7 +1,7 @@
 import React from 'react';
 import { StyleSheet, Text, View, TextInput, Button, TouchableHighlight, Image } from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome';
-import { StackNavigator} from 'react-navigation';
+import { StackNavigator } from 'react-navigation';
 
 var Dimensions = require('Dimensions');
 
@@ -13,155 +13,155 @@ export default class Services extends React.Component {
   constructor() {
     super();
   }
-    render() {
+  render() {
 
-      const {navigate} = this.props.navigation;
+    const { navigate } = this.props.navigation;
 
-      return (
-        <View style={styles.container}>
+    return (
+      <View style={styles.container}>
         <View style={styles.columns}>
           <TouchableHighlight
-          style={styles.button}
-          underlayColor='transparent'
-          onPress={() => navigate('ServiceByCategory', {category: 'Bronzeamento', props: this.props.navigation})}
+            style={styles.button}
+            underlayColor='transparent'
+            onPress={() => navigate('ServiceByCategory', { category: 'Bronzeamento', props: this.props.navigation })}
           >
-            <View style={{alignItems: 'center', flexDirection:'row'}}>
-              <Image 
-              style={styles.icons}
-              source={require('../icons/spray_tan.png')}/>
-              <Text style={styles.thlBox}> Bronze</Text>  
+            <View style={{ alignItems: 'center', flexDirection: 'row' }}>
+              <Image
+                style={styles.icons}
+                source={require('../icons/spray_tan.png')} />
+              <Text style={styles.thlBox}> Bronze</Text>
             </View>
           </TouchableHighlight>
           <TouchableHighlight
-          style={styles.button}
-          underlayColor='transparent'
-          onPress={() => navigate('ServiceByCategory', {category: 'Detox', props: this.props.navigation})}
+            style={styles.button}
+            underlayColor='transparent'
+            onPress={() => navigate('ServiceByCategory', { category: 'Detox', props: this.props.navigation })}
           >
-            <View style={{alignItems: 'center', flexDirection:'row'}}>
-              <Image 
-              style={styles.icons}
-              source={require('../icons/dtox.png')}/>
-              <Text style={styles.thlBox}> DTOX</Text>  
+            <View style={{ alignItems: 'center', flexDirection: 'row' }}>
+              <Image
+                style={styles.icons}
+                source={require('../icons/dtox.png')} />
+              <Text style={styles.thlBox}> DTOX</Text>
             </View>
           </TouchableHighlight>
           <TouchableHighlight
-          style={styles.button}
-          underlayColor='transparent'
-          onPress={() => navigate('ServiceByCategory', {category: 'Unhas', props: this.props.navigation})}
+            style={styles.button}
+            underlayColor='transparent'
+            onPress={() => navigate('ServiceByCategory', { category: 'Unhas', props: this.props.navigation })}
           >
-            <View style={{alignItems: 'center', flexDirection:'row'}}>
-              <Image 
-              style={styles.icons}
-              source={require('../icons/nails.png')}/>
-              <Text style={styles.thlBox}> Unhas</Text>  
+            <View style={{ alignItems: 'center', flexDirection: 'row' }}>
+              <Image
+                style={styles.icons}
+                source={require('../icons/nails.png')} />
+              <Text style={styles.thlBox}> Unhas</Text>
             </View>
           </TouchableHighlight>
           <TouchableHighlight
-          style={styles.button}
-          underlayColor='transparent'
-          onPress={() => navigate('ServiceByCategory', {category: 'Depilação', props: this.props.navigation})}
+            style={styles.button}
+            underlayColor='transparent'
+            onPress={() => navigate('ServiceByCategory', { category: 'Depilação', props: this.props.navigation })}
           >
-            <View style={{alignItems: 'center', flexDirection:'row'}}>
-              <Image 
-              style={styles.icons}
-              source={require('../icons/waxing.png')}/>
-              <Text style={styles.thlBox}> Depilação</Text>  
+            <View style={{ alignItems: 'center', flexDirection: 'row' }}>
+              <Image
+                style={styles.icons}
+                source={require('../icons/waxing.png')} />
+              <Text style={styles.thlBox}> Depilação</Text>
             </View>
           </TouchableHighlight>
         </View>
         <View style={styles.columns}>
           <TouchableHighlight
-          style={styles.button}
-          underlayColor='transparent'
-          onPress={() => navigate('ServiceByCategory', {category: 'Olhos', props: this.props.navigation})}
+            style={styles.button}
+            underlayColor='transparent'
+            onPress={() => navigate('ServiceByCategory', { category: 'Olhos', props: this.props.navigation })}
           >
-            <View style={{alignItems: 'center', flexDirection:'row'}}>
-              <Image 
-              style={styles.icons}
-              source={require('../icons/eyes.png')}/>
-              <Text style={styles.thlBox}> Olhos</Text>  
+            <View style={{ alignItems: 'center', flexDirection: 'row' }}>
+              <Image
+                style={styles.icons}
+                source={require('../icons/eyes.png')} />
+              <Text style={styles.thlBox}> Olhos</Text>
             </View>
           </TouchableHighlight>
           <TouchableHighlight
-          style={styles.button}
-          underlayColor='transparent'
-          onPress={() => navigate('ServiceByCategory', {category: 'Maquiagem', props: this.props.navigation})}
+            style={styles.button}
+            underlayColor='transparent'
+            onPress={() => navigate('ServiceByCategory', { category: 'Maquiagem', props: this.props.navigation })}
           >
-            <View style={{alignItems: 'center', flexDirection:'row'}}>
-              <Image 
-              style={styles.icons}
-              source={require('../icons/make_up.png')}/>
-              <Text style={styles.thlBox}> Maquiagem</Text>  
+            <View style={{ alignItems: 'center', flexDirection: 'row' }}>
+              <Image
+                style={styles.icons}
+                source={require('../icons/make_up.png')} />
+              <Text style={styles.thlBox}> Maquiagem</Text>
             </View>
           </TouchableHighlight>
           <TouchableHighlight
-          style={styles.button}
-          underlayColor='transparent'
-          onPress={() => navigate('ServiceByCategory', {category: 'Unhas', props: this.props.navigation})}
+            style={styles.button}
+            underlayColor='transparent'
+            onPress={() => navigate('ServiceByCategory', { category: 'Unhas', props: this.props.navigation })}
           >
-            <View style={{alignItems: 'center', flexDirection:'row'}}>
-              <Image 
-              style={styles.icons}
-              source={require('../icons/massage.png')}/>
-              <Text style={styles.thlBox}> Massagem</Text>  
+            <View style={{ alignItems: 'center', flexDirection: 'row' }}>
+              <Image
+                style={styles.icons}
+                source={require('../icons/massage.png')} />
+              <Text style={styles.thlBox}> Massagem</Text>
             </View>
           </TouchableHighlight>
           <TouchableHighlight
-          style={styles.button}
-          underlayColor='transparent'
-          onPress={() => navigate('ServiceByCategory', {category: 'Pacotes', props: this.props.navigation})}
+            style={styles.button}
+            underlayColor='transparent'
+            onPress={() => navigate('ServiceByCategory', { category: 'Pacotes', props: this.props.navigation })}
           >
-            <View style={{alignItems: 'center', flexDirection:'row'}}>
-              <Image 
-              style={styles.icons}
-              source={require('../icons/packages.png')}/>
-              <Text style={styles.thlBox}> Pacotes</Text>  
+            <View style={{ alignItems: 'center', flexDirection: 'row' }}>
+              <Image
+                style={styles.icons}
+                source={require('../icons/packages.png')} />
+              <Text style={styles.thlBox}> Pacotes</Text>
             </View>
           </TouchableHighlight>
         </View>
       </View>
-      )
-    }
+    )
   }
-  
-  const styles = StyleSheet.create({
-    container: {
-      justifyContent: 'center', 
-      flexDirection: 'row', 
-      flex: 1,
-      backgroundColor: '#da5353',
-      
-    },
-    alignRight: {
-      marginTop: 20,
-      marginRight: 60,
-      alignSelf: 'flex-end',
-    },
-    welcome:{
-      marginBottom: 20
-    },
-    button: {
-      backgroundColor: "#fff",
-      justifyContent: 'center', 
-      alignItems: 'center',
-      width: (width - 20) / 2,
-      margin: 5,
-      height: (height - 125) / 4,
-      borderRadius: 5,
-    },
-    columns: {
-      marginTop: 30
-    },
-    serviceCard: {
-      height: 60,
-      width: 160
-    },
-    thlBox: {
-      color: '#c48c3a'
-    },
-    icons: {
-      width: 30,
-      height: 30,
-      resizeMode: 'contain'
-    }
-  });
+}
+
+const styles = StyleSheet.create({
+  container: {
+    justifyContent: 'center',
+    flexDirection: 'row',
+    flex: 1,
+    backgroundColor: '#ffd8d8',
+
+  },
+  alignRight: {
+    marginTop: 20,
+    marginRight: 60,
+    alignSelf: 'flex-end',
+  },
+  welcome: {
+    marginBottom: 20
+  },
+  button: {
+    backgroundColor: "#fff",
+    justifyContent: 'center',
+    alignItems: 'center',
+    width: (width - 30) / 2,
+    margin: 5,
+    height: (height - 125) / 4,
+    borderRadius: 3,
+  },
+  columns: {
+    marginTop: 30
+  },
+  serviceCard: {
+    height: 60,
+    width: 140
+  },
+  thlBox: {
+    color: '#c48c3a'
+  },
+  icons: {
+    width: 30,
+    height: 30,
+    resizeMode: 'contain'
+  }
+});
