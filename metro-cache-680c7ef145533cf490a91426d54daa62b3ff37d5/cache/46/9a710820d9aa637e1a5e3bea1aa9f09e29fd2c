@@ -27,9 +27,17 @@ __d(function (global, require, module, exports, _dependencyMap) {
 
     var _reactNavigation = require(_dependencyMap[5], "react-navigation");
 
-    var _reactNativeMessages = require(_dependencyMap[6], "react-native-messages");
+    var _AuthController = require(_dependencyMap[6], "./../Controller/AuthController");
 
-    var _reactNativeMaterialTextinput = require(_dependencyMap[7], "react-native-material-textinput");
+    var _AuthController2 = _interopRequireDefault(_AuthController);
+
+    var _firebase = require(_dependencyMap[7], "firebase");
+
+    var _firebase2 = _interopRequireDefault(_firebase);
+
+    var _reactNativeMessages = require(_dependencyMap[8], "react-native-messages");
+
+    var _reactNativeMaterialTextinput = require(_dependencyMap[9], "react-native-material-textinput");
 
     var _reactNativeMaterialTextinput2 = _interopRequireDefault(_reactNativeMaterialTextinput);
 
@@ -42,8 +50,8 @@ __d(function (global, require, module, exports, _dependencyMap) {
     function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
     var _components = {
-        FormScheduling: {
-            displayName: "FormScheduling"
+        FormLogin: {
+            displayName: "FormLogin"
         }
     };
 
@@ -64,37 +72,154 @@ __d(function (global, require, module, exports, _dependencyMap) {
         width = _Dimensions$get.width,
         height = _Dimensions$get.height;
 
-    var FormScheduling = _wrapComponent("FormScheduling")(function (_React$Component) {
-        _inherits(FormScheduling, _React$Component);
+    var FormLogin = _wrapComponent("FormLogin")(function (_React$Component) {
+        _inherits(FormLogin, _React$Component);
 
-        function FormScheduling() {
-            _classCallCheck(this, FormScheduling);
+        function FormLogin(props) {
+            _classCallCheck(this, FormLogin);
 
-            var _this = _possibleConstructorReturn(this, (FormScheduling.__proto__ || Object.getPrototypeOf(FormScheduling)).call(this));
+            var _this = _possibleConstructorReturn(this, (FormLogin.__proto__ || Object.getPrototypeOf(FormLogin)).call(this, props));
 
             _this.state = {
                 email: '',
-                uid: "",
-                name: ""
+                password: ''
+            };
+            _this.state = {
+                email: '',
+                password: '',
+                error: '',
+                loading: false
             };
             return _this;
         }
 
-        _createClass(FormScheduling, [{
-            key: "render",
-            value: function render() {
+        _createClass(FormLogin, [{
+            key: "componentWillMount",
+            value: function componentWillMount() {
+                _firebase2.default.initializeApp({
+                    apiKey: "AIzaSyCi2kQbt9xjCcvu7x-OUaoxA0gH9lwxz3c",
+                    authDomain: "nailsup-7e965.firebaseapp.com",
+                    databaseURL: "https://nailsup-7e965.firebaseio.com",
+                    projectId: "nailsup-7e965",
+                    storageBucket: "",
+                    messagingSenderId: "118066102064"
+                });
+            }
+        }, {
+            key: "onLoginPress",
+            value: function onLoginPress() {
                 var _this2 = this;
 
-                var email = this.state.email.email;
-                var uid = this.state.uid.uid;
-                var name = this.state.name.name;
+                this.setState({
+                    error: '',
+                    loading: true
+                });
+                var password = this.state.password;
+                var email = this.state.email;
+
+                _firebase2.default.auth().signInWithEmailAndPassword(email, password).then(function () {
+                    _this2.props.navigation.navigate('HomeUser');
+
+                    _this2.setState({
+                        error: '',
+                        loading: false
+                    });
+                }).catch(function () {
+                    _this2.setState({
+                        error: 'Falha de autenticação.',
+                        loading: false
+                    });
+
+                    (0, _reactNativeMessages.showMessage)('Login falhou!');
+                });
+            }
+        }, {
+            key: "onLogoutPress",
+            value: function onLogoutPress() {
+                var _this3 = this;
+
+                this.setState({
+                    error: '',
+                    loading: true
+                });
+                var password = this.state.password;
+                var email = this.state.email;
+
+                _firebase2.default.auth().signInWithEmailAndPassword(email, password).then(function () {
+                    _this3.renderLogin();
+
+                    _this3.setState({
+                        error: '',
+                        loading: false
+                    });
+                }).catch(function () {
+                    _this3.setState({
+                        error: 'Falha de autenticação.',
+                        loading: false
+                    });
+
+                    (0, _reactNativeMessages.showMessage)('Logout falhou!');
+                });
+            }
+        }, {
+            key: "renderLogin",
+            value: function renderLogin() {
+                return _react3.default.createElement(
+                    _reactNative.TouchableHighlight,
+                    {
+                        style: styles.circleBtn,
+                        underlayColor: "transparent",
+                        onPress: this.onLoginPress.bind(this),
+                        __source: {
+                            fileName: _jsxFileName,
+                            lineNumber: 71
+                        }
+                    },
+                    _react3.default.createElement(
+                        _reactNative.View,
+                        {
+                            style: styles.Row,
+                            __source: {
+                                fileName: _jsxFileName,
+                                lineNumber: 74
+                            }
+                        },
+                        _react3.default.createElement(_FontAwesome2.default, {
+                            name: "arrow-right",
+                            style: styles.iconCircle,
+                            size: 25,
+                            color: "#da5353",
+                            __source: {
+                                fileName: _jsxFileName,
+                                lineNumber: 75
+                            }
+                        }),
+                        _react3.default.createElement(
+                            _reactNative.Text,
+                            {
+                                style: styles.TextBtn,
+                                __source: {
+                                    fileName: _jsxFileName,
+                                    lineNumber: 76
+                                }
+                            },
+                            "Cadastro"
+                        )
+                    )
+                );
+            }
+        }, {
+            key: "render",
+            value: function render() {
+                var _this4 = this;
+
                 return _react3.default.createElement(
                     _reactNative.View,
                     {
                         style: styles.container,
                         __source: {
                             fileName: _jsxFileName,
-                            lineNumber: 28
+                            lineNumber: 85
                         }
                     },
                     _react3.default.createElement(
@@ -102,7 +227,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
                         {
                             __source: {
                                 fileName: _jsxFileName,
-                                lineNumber: 29
+                                lineNumber: 86
                             }
                         },
                         _react3.default.createElement(
@@ -111,7 +236,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
                                 style: styles.containerCard,
                                 __source: {
                                     fileName: _jsxFileName,
-                                    lineNumber: 30
+                                    lineNumber: 87
                                 }
                             },
                             _react3.default.createElement(
@@ -120,7 +245,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
                                     style: styles.titleBox,
                                     __source: {
                                         fileName: _jsxFileName,
-                                        lineNumber: 31
+                                        lineNumber: 88
                                     }
                                 },
                                 " Login"
@@ -132,15 +257,21 @@ __d(function (global, require, module, exports, _dependencyMap) {
                                 width: width - 60,
                                 underlineActiveColor: "#da5353",
                                 activeColor: "#da5353",
-                                value: email,
+                                value: this.state.email,
                                 onChangeText: function onChangeText(email) {
-                                    return _this2.setState({
+                                    return _this4.setState({
                                         email: email
                                     });
                                 },
+                                onSubmitEditing: function onSubmitEditing() {
+                                    return _this4.passwordInput.focus();
+                                },
+                                ref: function ref(input) {
+                                    return _this4.userInput = input;
+                                },
                                 __source: {
                                     fileName: _jsxFileName,
-                                    lineNumber: 33
+                                    lineNumber: 90
                                 }
                             }),
                             _react3.default.createElement(_reactNativeMaterialTextinput2.default, {
@@ -150,15 +281,22 @@ __d(function (global, require, module, exports, _dependencyMap) {
                                 width: width - 60,
                                 underlineActiveColor: "#da5353",
                                 activeColor: "#da5353",
-                                value: name,
-                                onChangeText: function onChangeText(name) {
-                                    return _this2.setState({
-                                        name: name
+                                secureTextEntry: true,
+                                value: this.state.password,
+                                onChangeText: function onChangeText(password) {
+                                    return _this4.setState({
+                                        password: password
                                     });
+                                },
+                                onSubmitEditing: function onSubmitEditing() {
+                                    return _this4.onLoginPress();
+                                },
+                                ref: function ref(input) {
+                                    return _this4.userInput = input;
                                 },
                                 __source: {
                                     fileName: _jsxFileName,
-                                    lineNumber: 43
+                                    lineNumber: 102
                                 }
                             }),
                             _react3.default.createElement(
@@ -167,7 +305,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
                                     style: styles.alignRightBottom,
                                     __source: {
                                         fileName: _jsxFileName,
-                                        lineNumber: 55
+                                        lineNumber: 117
                                     }
                                 },
                                 _react3.default.createElement(
@@ -175,12 +313,10 @@ __d(function (global, require, module, exports, _dependencyMap) {
                                     {
                                         style: styles.circleBtn,
                                         underlayColor: "transparent",
-                                        onPress: function onPress() {
-                                            return (0, _reactNativeMessages.showMessage)('Agendamento Confirmado!');
-                                        },
+                                        onPress: this.onLoginPress.bind(this),
                                         __source: {
                                             fileName: _jsxFileName,
-                                            lineNumber: 56
+                                            lineNumber: 118
                                         }
                                     },
                                     _react3.default.createElement(
@@ -189,7 +325,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
                                             style: styles.Row,
                                             __source: {
                                                 fileName: _jsxFileName,
-                                                lineNumber: 59
+                                                lineNumber: 121
                                             }
                                         },
                                         _react3.default.createElement(_FontAwesome2.default, {
@@ -199,7 +335,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
                                             color: "#da5353",
                                             __source: {
                                                 fileName: _jsxFileName,
-                                                lineNumber: 60
+                                                lineNumber: 122
                                             }
                                         }),
                                         _react3.default.createElement(
@@ -208,7 +344,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
                                                 style: styles.TextBtn,
                                                 __source: {
                                                     fileName: _jsxFileName,
-                                                    lineNumber: 61
+                                                    lineNumber: 123
                                                 }
                                             },
                                             "Login"
@@ -221,17 +357,17 @@ __d(function (global, require, module, exports, _dependencyMap) {
                     _react3.default.createElement(_reactNativeMessages.MessageBar, {
                         __source: {
                             fileName: _jsxFileName,
-                            lineNumber: 69
+                            lineNumber: 131
                         }
                     })
                 );
             }
         }]);
 
-        return FormScheduling;
+        return FormLogin;
     }(_react3.default.Component));
 
-    exports.default = FormScheduling;
+    exports.default = FormLogin;
 
     var styles = _reactNative.StyleSheet.create({
         container: {

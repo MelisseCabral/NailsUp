@@ -1,0 +1,53 @@
+__d(function (global, require, module, exports, _dependencyMap) {
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+
+  var _reactNavigation = require(_dependencyMap[0], "react-navigation");
+
+  var _Login = require(_dependencyMap[1], "./Login");
+
+  var _Login2 = _interopRequireDefault(_Login);
+
+  var _SignUp = require(_dependencyMap[2], "./SignUp");
+
+  var _SignUp2 = _interopRequireDefault(_SignUp);
+
+  function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+  var StackUser = (0, _reactNavigation.StackNavigator)({
+    LoginForm: {
+      screen: _Login2.default,
+      navigationOptions: function navigationOptions(_ref) {
+        var navigation = _ref.navigation;
+        return {
+          title: '',
+          header: null
+        };
+      }
+    },
+    SignUp: {
+      screen: _SignUp2.default,
+      navigationOptions: function navigationOptions(_ref2) {
+        var navigation = _ref2.navigation;
+        return {
+          title: '',
+          header: null
+        };
+      }
+    },
+    HomeUser: {
+      screen: _SignUp2.default,
+      navigationOptions: function navigationOptions(_ref3) {
+        var navigation = _ref3.navigation;
+        return {
+          title: '',
+          header: null
+        };
+      }
+    }
+  }, {
+    headerMode: 'none'
+  });
+  exports.default = StackUser;
+});

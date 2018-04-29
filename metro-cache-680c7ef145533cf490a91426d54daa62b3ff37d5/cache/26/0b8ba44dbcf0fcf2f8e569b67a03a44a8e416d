@@ -1,0 +1,35 @@
+__d(function (global, require, module, exports, _dependencyMap) {
+    var _firebase = require(_dependencyMap[0], "firebase");
+
+    var _firebase2 = _interopRequireDefault(_firebase);
+
+    function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+    function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+    var AuthController = function AuthController() {
+        var _this = this;
+
+        _classCallCheck(this, AuthController);
+
+        this.uid = '';
+        this.username = '';
+        this.password = '';
+        this.token = '';
+
+        _firebase2.default.initializeApp({
+            apiKey: "AIzaSyCi2kQbt9xjCcvu7x-OUaoxA0gH9lwxz3c",
+            authDomain: "nailsup-7e965.firebaseapp.com",
+            databaseURL: "https://nailsup-7e965.firebaseio.com",
+            projectId: "nailsup-7e965",
+            storageBucket: "",
+            messagingSenderId: "118066102064"
+        });
+
+        _firebase2.default.auth().onAuthStateChanged(function (user) {
+            if (user) {
+                _this.setUid(user.uid);
+            }
+        });
+    };
+});

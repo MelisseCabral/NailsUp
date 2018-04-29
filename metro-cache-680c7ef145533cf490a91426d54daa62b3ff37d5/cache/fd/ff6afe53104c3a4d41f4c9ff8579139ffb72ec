@@ -33,9 +33,9 @@ __d(function (global, require, module, exports, _dependencyMap) {
 
   var _Home2 = _interopRequireDefault(_Home);
 
-  var _Login = require(_dependencyMap[7], "./Login");
+  var _StackUser = require(_dependencyMap[7], "./StackUser");
 
-  var _Login2 = _interopRequireDefault(_Login);
+  var _StackUser2 = _interopRequireDefault(_StackUser);
 
   var _StackServices = require(_dependencyMap[8], "./StackServices");
 
@@ -329,7 +329,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
                 lineNumber: 67
               }
             },
-            _react3.default.createElement(_Login2.default, {
+            _react3.default.createElement(_StackUser2.default, {
               __source: {
                 fileName: _jsxFileName,
                 lineNumber: 72

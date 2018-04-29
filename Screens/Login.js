@@ -4,6 +4,8 @@ import TabNavigator from 'react-native-tab-navigator';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import { Dimensions } from 'react-native';
 import { StackNavigator } from 'react-navigation';
+import AuthController from './../Controller/AuthController'
+import firebase from 'firebase';
 
 //Look for best one MessageBar
 import { showMessage, MessageBar } from 'react-native-messages';
@@ -11,19 +13,73 @@ import TextInput from 'react-native-material-textinput';
 
 var { width, height } = Dimensions.get('window');
 
+export default class FormLogin extends React.Component {
 
-export default class FormScheduling extends React.Component {
-    constructor() {
-        super();
-        this.state = { email: '', uid: "", name: "", pass:"" };
+    state = { email: '', password: '' };
+
+    constructor(props){
+        super(props);
+        this.state = {email: '', password: '', error:'', loading:false};
     }
+
+    componentWillMount() {
+        firebase.initializeApp({
+            apiKey: "AIzaSyCi2kQbt9xjCcvu7x-OUaoxA0gH9lwxz3c",
+            authDomain: "nailsup-7e965.firebaseapp.com",
+            databaseURL: "https://nailsup-7e965.firebaseio.com",
+            projectId: "nailsup-7e965",
+            storageBucket: "",
+            messagingSenderId: "118066102064"
+        });
+    }
+    
+    onLoginPress() {
+        this.setState({ error: '', loading: true});
+      
+        const password = this.state.password;
+        const email = this.state.email;
+    
+        firebase.auth().signInWithEmailAndPassword(email, password)
+        .then(() => {
+            this.props.navigation.navigate('HomeUser');
+            this.setState({ error: '', loading: false});
+        })
+        .catch(() => {
+            this.setState({error: 'Falha de autenticação.', loading: false})
+            showMessage('Login falhou!')
+        })
+    };
+
+    onLogoutPress() {
+        this.setState({ error: '', loading: true});
+      
+        const password = this.state.password;
+        const email = this.state.email;
+    
+        firebase.auth().signInWithEmailAndPassword(email, password)
+        .then(() => {
+          this.renderLogin();
+          this.setState({ error: '', loading: false});
+        })
+        .catch(() => {
+            this.setState({error: 'Falha de autenticação.', loading: false})
+            showMessage('Logout falhou!');
+        })
+    };
+
+    renderLogin() {
+        return <TouchableHighlight style={styles.circleBtn}
+                    underlayColor='transparent'
+                    onPress={this.onLoginPress.bind(this)}>
+                    <View style={styles.Row}>
+                        <Icon name="arrow-right" style={styles.iconCircle} size={25} color="#da5353" />
+                        <Text style={styles.TextBtn}>Cadastro</Text>
+                    </View>
+                </TouchableHighlight>;
+    }
+
     render() {
-
-        let { email } = this.state.email;
-        let { uid } = this.state.uid;
-        let { name } = this.state.name;
-        let { pass } = this.state.pass;
-
+        
         return (
 
             <View style={styles.container}>
@@ -38,8 +94,10 @@ export default class FormScheduling extends React.Component {
                             width={width - 60}
                             underlineActiveColor="#da5353"
                             activeColor="#da5353"
-                            value={email}
+                            value={this.state.email}
                             onChangeText={email => this.setState({ email })}
+                            onSubmitEditing={() => this.passwordInput.focus()}
+                            ref={(input)=> this.userInput = input}  
                         />
                         <TextInput
                             style={styles.textInputForm}
@@ -48,29 +106,24 @@ export default class FormScheduling extends React.Component {
                             width={width - 60}
                             underlineActiveColor="#da5353"
                             activeColor="#da5353"
-                            value={pass}
-                            onChangeText={pass => this.setState({ pass })}
+                            secureTextEntry
+                            value={this.state.password}
+                            onChangeText={password => this.setState({ password })}
+                            onSubmitEditing={() => this.onLoginPress()}
+                            ref={(input)=> this.userInput = input}  
                         />
                        
 
                         <View style={styles.alignRightBottom}>
                             <TouchableHighlight style={styles.circleBtn}
                                 underlayColor='transparent'
-                                onPress={() => showMessage('Tentativa de login')}>
+                                onPress={this.onLoginPress.bind(this)}>
                                 <View style={styles.Row}>
                                     <Icon name="arrow-right" style={styles.iconCircle} size={25} color="#da5353" />
                                     <Text style={styles.TextBtn}>Login</Text>
                                 </View>
                             </TouchableHighlight>
                         </View>
-                        <TouchableHighlight style={styles.circleBtn}
-                                underlayColor='transparent'
-                                onPress={() => showMessage('Tentativa de login')}>
-                                <View style={styles.Row}>
-                                    <Icon name="arrow-right" style={styles.iconCircle} size={25} color="#da5353" />
-                                    <Text style={styles.TextBtn}>Cadastro</Text>
-                                </View>
-                            </TouchableHighlight>
                     </View>
 
 
