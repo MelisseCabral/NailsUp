@@ -1,0 +1,350 @@
+__d(function (global, require, module, exports, _dependencyMap) {
+    Object.defineProperty(exports, "__esModule", {
+        value: true
+    });
+
+    var _react2 = require(_dependencyMap[0], "react");
+
+    var _react3 = _interopRequireDefault(_react2);
+
+    var _index = require(_dependencyMap[1], "./../node_modules/react-transform-hmr/lib/index.js");
+
+    var _index2 = _interopRequireDefault(_index);
+
+    var _jsxFileName = "/home/melisse/Documents/nailsup/Screens/Login.js";
+
+    var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+    var _reactNative = require(_dependencyMap[2], "react-native");
+
+    var _reactNativeTabNavigator = require(_dependencyMap[3], "react-native-tab-navigator");
+
+    var _reactNativeTabNavigator2 = _interopRequireDefault(_reactNativeTabNavigator);
+
+    var _FontAwesome = require(_dependencyMap[4], "@expo/vector-icons/FontAwesome");
+
+    var _FontAwesome2 = _interopRequireDefault(_FontAwesome);
+
+    var _reactNavigation = require(_dependencyMap[5], "react-navigation");
+
+    var _reactNativeMessages = require(_dependencyMap[6], "react-native-messages");
+
+    var _reactNativeMaterialTextinput = require(_dependencyMap[7], "react-native-material-textinput");
+
+    var _reactNativeMaterialTextinput2 = _interopRequireDefault(_reactNativeMaterialTextinput);
+
+    function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+    function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+    function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+    function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+    var _components = {
+        FormScheduling: {
+            displayName: "FormScheduling"
+        }
+    };
+
+    var _node_modulesReactTransformHmrLibIndexJs2 = (0, _index2.default)({
+        filename: "/home/melisse/Documents/nailsup/Screens/Login.js",
+        components: _components,
+        locals: [module],
+        imports: [_react3.default]
+    });
+
+    function _wrapComponent(id) {
+        return function (Component) {
+            return _node_modulesReactTransformHmrLibIndexJs2(Component, id);
+        };
+    }
+
+    var _Dimensions$get = _reactNative.Dimensions.get('window'),
+        width = _Dimensions$get.width,
+        height = _Dimensions$get.height;
+
+    var FormScheduling = _wrapComponent("FormScheduling")(function (_React$Component) {
+        _inherits(FormScheduling, _React$Component);
+
+        function FormScheduling() {
+            _classCallCheck(this, FormScheduling);
+
+            var _this = _possibleConstructorReturn(this, (FormScheduling.__proto__ || Object.getPrototypeOf(FormScheduling)).call(this));
+
+            _this.state = {
+                email: '',
+                uid: "",
+                name: ""
+            };
+            return _this;
+        }
+
+        _createClass(FormScheduling, [{
+            key: "render",
+            value: function render() {
+                var _this2 = this;
+
+                var email = this.state.email.email;
+                var uid = this.state.uid.uid;
+                var name = this.state.name.name;
+                return _react3.default.createElement(
+                    _reactNative.View,
+                    {
+                        style: styles.container,
+                        __source: {
+                            fileName: _jsxFileName,
+                            lineNumber: 28
+                        }
+                    },
+                    _react3.default.createElement(
+                        _reactNative.ScrollView,
+                        {
+                            __source: {
+                                fileName: _jsxFileName,
+                                lineNumber: 29
+                            }
+                        },
+                        _react3.default.createElement(
+                            _reactNative.View,
+                            {
+                                style: styles.containerCard,
+                                __source: {
+                                    fileName: _jsxFileName,
+                                    lineNumber: 30
+                                }
+                            },
+                            _react3.default.createElement(
+                                _reactNative.Text,
+                                {
+                                    style: styles.titleBox,
+                                    __source: {
+                                        fileName: _jsxFileName,
+                                        lineNumber: 31
+                                    }
+                                },
+                                " Login"
+                            ),
+                            _react3.default.createElement(_reactNativeMaterialTextinput2.default, {
+                                style: styles.textInputForm,
+                                label: "Email",
+                                labelColor: "gray",
+                                width: width - 60,
+                                underlineActiveColor: "#da5353",
+                                activeColor: "#da5353",
+                                value: email,
+                                onChangeText: function onChangeText(email) {
+                                    return _this2.setState({
+                                        email: email
+                                    });
+                                },
+                                __source: {
+                                    fileName: _jsxFileName,
+                                    lineNumber: 33
+                                }
+                            }),
+                            _react3.default.createElement(_reactNativeMaterialTextinput2.default, {
+                                style: styles.textInputForm,
+                                label: "Senha",
+                                labelColor: "gray",
+                                width: width - 60,
+                                underlineActiveColor: "#da5353",
+                                activeColor: "#da5353",
+                                value: name,
+                                onChangeText: function onChangeText(name) {
+                                    return _this2.setState({
+                                        name: name
+                                    });
+                                },
+                                __source: {
+                                    fileName: _jsxFileName,
+                                    lineNumber: 43
+                                }
+                            }),
+                            _react3.default.createElement(
+                                _reactNative.View,
+                                {
+                                    style: styles.alignRightBottom,
+                                    __source: {
+                                        fileName: _jsxFileName,
+                                        lineNumber: 55
+                                    }
+                                },
+                                _react3.default.createElement(
+                                    _reactNative.TouchableHighlight,
+                                    {
+                                        style: styles.circleBtn,
+                                        underlayColor: "transparent",
+                                        onPress: function onPress() {
+                                            return (0, _reactNativeMessages.showMessage)('Agendamento Confirmado!');
+                                        },
+                                        __source: {
+                                            fileName: _jsxFileName,
+                                            lineNumber: 56
+                                        }
+                                    },
+                                    _react3.default.createElement(
+                                        _reactNative.View,
+                                        {
+                                            style: styles.Row,
+                                            __source: {
+                                                fileName: _jsxFileName,
+                                                lineNumber: 59
+                                            }
+                                        },
+                                        _react3.default.createElement(_FontAwesome2.default, {
+                                            name: "arrow-right",
+                                            style: styles.iconCircle,
+                                            size: 25,
+                                            color: "#da5353",
+                                            __source: {
+                                                fileName: _jsxFileName,
+                                                lineNumber: 60
+                                            }
+                                        }),
+                                        _react3.default.createElement(
+                                            _reactNative.Text,
+                                            {
+                                                style: styles.TextBtn,
+                                                __source: {
+                                                    fileName: _jsxFileName,
+                                                    lineNumber: 61
+                                                }
+                                            },
+                                            "Login"
+                                        )
+                                    )
+                                )
+                            )
+                        )
+                    ),
+                    _react3.default.createElement(_reactNativeMessages.MessageBar, {
+                        __source: {
+                            fileName: _jsxFileName,
+                            lineNumber: 69
+                        }
+                    })
+                );
+            }
+        }]);
+
+        return FormScheduling;
+    }(_react3.default.Component));
+
+    exports.default = FormScheduling;
+
+    var styles = _reactNative.StyleSheet.create({
+        container: {
+            flex: 1,
+            backgroundColor: '#ffd8d8',
+            alignItems: 'center',
+            justifyContent: 'center',
+            marginTop: 20
+        },
+        textInputForm: {
+            width: 240
+        },
+        TextBtn: {
+            color: '#da5353'
+        },
+        Row: {
+            margin: 10,
+            flexDirection: 'row',
+            alignItems: 'center',
+            justifyContent: 'center'
+        },
+        containerCard: {
+            alignItems: 'center',
+            justifyContent: 'center',
+            flex: 1,
+            backgroundColor: "#fff",
+            width: width - 20,
+            margin: 10,
+            marginBottom: 5,
+            height: height * 0.6,
+            borderRadius: 5
+        },
+        alignRight: {
+            marginTop: 20,
+            marginRight: 10,
+            justifyContent: 'flex-end',
+            alignSelf: 'flex-end'
+        },
+        TextInput: {
+            height: 30,
+            width: width - 60,
+            margin: 10,
+            marginLeft: 20,
+            marginRight: 20,
+            borderColor: 'gray'
+        },
+        alignRightBottom: {
+            margin: 10,
+            justifyContent: 'flex-end',
+            alignSelf: 'flex-end'
+        },
+        alignLeft: {
+            marginLeft: 20,
+            justifyContent: 'center',
+            alignSelf: 'flex-start'
+        },
+        welcome: {
+            margin: 20,
+            color: '#fff',
+            fontWeight: 'bold'
+        },
+        imgBg: {
+            width: width,
+            height: 170,
+            justifyContent: 'flex-end'
+        },
+        columns: {
+            marginTop: 5
+        },
+        thlBox: {
+            color: '#c48c3a'
+        },
+        titleBox: {
+            color: '#c48c3a',
+            fontWeight: 'bold',
+            paddingTop: 3,
+            marginBottom: 3
+        },
+        icons: {
+            paddingLeft: 220
+        },
+        iconCircle: {
+            margin: 10
+        },
+        textPrice: {
+            color: '#da5353'
+        },
+        button: {
+            color: "#3496f0",
+            margin: 20
+        },
+        circleBtn: {
+            borderRadius: 50,
+            borderWidth: 1,
+            borderColor: '#da5353',
+            alignItems: 'center',
+            justifyContent: 'center',
+            width: 100,
+            height: 50,
+            backgroundColor: '#fff',
+            marginRight: 10
+        },
+        imgBg: {
+            width: width,
+            height: 170,
+            justifyContent: 'flex-end'
+        },
+        containerPrice: {
+            width: width - 60,
+            height: 30,
+            justifyContent: 'center',
+            backgroundColor: '#fff',
+            paddingLeft: 10
+        }
+    });
+});

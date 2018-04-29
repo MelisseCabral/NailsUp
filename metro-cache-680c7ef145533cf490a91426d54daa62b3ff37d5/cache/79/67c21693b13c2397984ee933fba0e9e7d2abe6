@@ -1,0 +1,276 @@
+__d(function (global, require, module, exports, _dependencyMap) {
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+
+  var _react2 = require(_dependencyMap[0], "react");
+
+  var _react3 = _interopRequireDefault(_react2);
+
+  var _index = require(_dependencyMap[1], "./../react-transform-hmr/lib/index.js");
+
+  var _index2 = _interopRequireDefault(_index);
+
+  var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+  var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+  var _jsxFileName = "/home/melisse/Documents/nailsup/node_modules/react-native-messages/MessageBar.js";
+
+  var _reactNative = require(_dependencyMap[2], "react-native");
+
+  var _messageManager = require(_dependencyMap[3], "./messageManager");
+
+  var _messageManager2 = _interopRequireDefault(_messageManager);
+
+  function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+  function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+  function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+  function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+  var _components = {
+    MessageBar: {
+      displayName: "MessageBar"
+    }
+  };
+
+  var _reactTransformHmrLibIndexJs2 = (0, _index2.default)({
+    filename: "/home/melisse/Documents/nailsup/node_modules/react-native-messages/MessageBar.js",
+    components: _components,
+    locals: [module],
+    imports: [_react3.default]
+  });
+
+  function _wrapComponent(id) {
+    return function (Component) {
+      return _reactTransformHmrLibIndexJs2(Component, id);
+    };
+  }
+
+  var MIN_SWIPE_DISTANCE = 20;
+  var MIN_SWIPE_VELOCITY = 0.15;
+
+  var styles = _reactNative.StyleSheet.create({
+    root: {
+      position: 'absolute',
+      top: 0,
+      left: 0,
+      right: 0
+    },
+    message: {
+      paddingVertical: 15,
+      paddingHorizontal: 20,
+      justifyContent: 'center',
+      backgroundColor: 'grey'
+    },
+    messageText: {
+      color: 'white'
+    }
+  });
+
+  function Message(_ref) {
+    var message = _ref.message;
+    return _react3.default.createElement(
+      _reactNative.View,
+      {
+        style: styles.message,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 32
+        }
+      },
+      _react3.default.createElement(
+        _reactNative.Text,
+        {
+          style: styles.messageText,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 33
+          }
+        },
+        message
+      )
+    );
+  }
+
+  var MessageBar = _wrapComponent("MessageBar")(function (_Component) {
+    _inherits(MessageBar, _Component);
+
+    function MessageBar(props) {
+      _classCallCheck(this, MessageBar);
+
+      var _this = _possibleConstructorReturn(this, (MessageBar.__proto__ || Object.getPrototypeOf(MessageBar)).call(this, props));
+
+      _this.state = {
+        isVisibleAnimValue: new _reactNative.Animated.Value(0),
+        isAnimatingHide: false,
+        message: null,
+        config: {}
+      };
+      return _this;
+    }
+
+    _createClass(MessageBar, [{
+      key: "componentWillMount",
+      value: function componentWillMount() {
+        var _this2 = this;
+
+        this.panResponder = _reactNative.PanResponder.create({
+          onMoveShouldSetPanResponder: function onMoveShouldSetPanResponder(e, gesture) {
+            return _this2.getConfig().closeOnSwipe && gesture.dy < -MIN_SWIPE_DISTANCE && gesture.vy < -MIN_SWIPE_VELOCITY;
+          },
+          onPanResponderMove: function onPanResponderMove(e, gesture) {
+            if (!_this2.state.isAnimatingHide) {
+              _this2.hideMessage(_this2.state.message);
+            }
+          },
+          onShouldBlockNativeResponder: function onShouldBlockNativeResponder() {
+            return true;
+          }
+        });
+      }
+    }, {
+      key: "componentDidMount",
+      value: function componentDidMount() {
+        _messageManager2.default.registerMessageBar(this);
+      }
+    }, {
+      key: "componentWillUnmount",
+      value: function componentWillUnmount() {
+        _messageManager2.default.unregisterMessageBar();
+      }
+    }, {
+      key: "getConfig",
+      value: function getConfig() {
+        return _extends({}, this.props, this.state.config);
+      }
+    }, {
+      key: "pushMessage",
+      value: function pushMessage(message, config) {
+        var _this3 = this;
+
+        this.setState({
+          message: message,
+          config: config
+        }, function () {
+          return _this3.showMessage(message);
+        });
+      }
+    }, {
+      key: "showMessage",
+      value: function showMessage(message) {
+        var _this4 = this;
+
+        var _getConfig = this.getConfig(),
+            duration = _getConfig.duration,
+            showAnimationDuration = _getConfig.showAnimationDuration;
+
+        this.state.isVisibleAnimValue.setValue(0);
+        this.setState({
+          isAnimatingHide: false
+        });
+
+        _reactNative.Animated.timing(this.state.isVisibleAnimValue, {
+          toValue: 1,
+          duration: showAnimationDuration,
+          useNativeDriver: true
+        }).start(function () {
+          return setTimeout(function () {
+            return _this4.hideMessage(message);
+          }, duration);
+        });
+      }
+    }, {
+      key: "hideMessage",
+      value: function hideMessage(message) {
+        var _this5 = this;
+
+        if (message === this.state.message) {
+          var _getConfig2 = this.getConfig(),
+              hideAnimationDuration = _getConfig2.hideAnimationDuration;
+
+          this.setState({
+            isAnimatingHide: true
+          });
+
+          _reactNative.Animated.timing(this.state.isVisibleAnimValue, {
+            toValue: 0,
+            duration: hideAnimationDuration,
+            useNativeDriver: true
+          }).start(function () {
+            if (message === _this5.state.message) {
+              _this5.setState({
+                message: null,
+                config: {},
+                isAnimatingHide: false
+              });
+            }
+          });
+        }
+      }
+    }, {
+      key: "render",
+      value: function render() {
+        var _getConfig3 = this.getConfig(),
+            MessageComponent = _getConfig3.messageComponent,
+            slideAnimationOffset = _getConfig3.slideAnimationOffset;
+
+        var translateY = this.state.isVisibleAnimValue.interpolate({
+          inputRange: [0, 1],
+          outputRange: [-slideAnimationOffset, 0]
+        });
+        var opacity = this.state.isVisibleAnimValue.interpolate({
+          inputRange: [0, 1],
+          outputRange: [0, 1]
+        });
+        return _react3.default.createElement(
+          _reactNative.Animated.View,
+          {
+            style: [styles.root, {
+              transform: [{
+                translateY: translateY
+              }]
+            }, {
+              opacity: opacity
+            }],
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 109
+            }
+          },
+          _react3.default.createElement(
+            _reactNative.View,
+            _extends({}, this.panResponder.panHandlers, {
+              __source: {
+                fileName: _jsxFileName,
+                lineNumber: 116
+              }
+            }),
+            this.state.message && _react3.default.createElement(MessageComponent, {
+              message: this.state.message.message,
+              __source: {
+                fileName: _jsxFileName,
+                lineNumber: 118
+              }
+            })
+          )
+        );
+      }
+    }]);
+
+    return MessageBar;
+  }(_react2.Component));
+
+  exports.default = MessageBar;
+  MessageBar.defaultProps = {
+    messageComponent: Message,
+    duration: 1000,
+    slideAnimationOffset: 40,
+    showAnimationDuration: 255,
+    hideAnimationDuration: 255,
+    closeOnSwipe: true
+  };
+});

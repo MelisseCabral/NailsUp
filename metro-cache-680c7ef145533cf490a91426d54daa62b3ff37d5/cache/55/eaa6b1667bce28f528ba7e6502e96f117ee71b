@@ -1,0 +1,181 @@
+__d(function (global, require, module, exports, _dependencyMap) {
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+
+  var _react2 = require(_dependencyMap[0], "react");
+
+  var _react3 = _interopRequireDefault(_react2);
+
+  var _index = require(_dependencyMap[1], "./../../react-transform-hmr/lib/index.js");
+
+  var _index2 = _interopRequireDefault(_index);
+
+  var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+  var _class,
+      _temp,
+      _initialiseProps,
+      _jsxFileName = "/home/melisse/Documents/nailsup/node_modules/react-native-material-textinput/lib/Label.js";
+
+  var _reactNative = require(_dependencyMap[2], "react-native");
+
+  var _propTypes = require(_dependencyMap[3], "prop-types");
+
+  var _propTypes2 = _interopRequireDefault(_propTypes);
+
+  function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+  function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+  function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+  function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+  var _components = {
+    _component: {}
+  };
+
+  var _reactTransformHmrLibIndexJs2 = (0, _index2.default)({
+    filename: "/home/melisse/Documents/nailsup/node_modules/react-native-material-textinput/lib/Label.js",
+    components: _components,
+    locals: [module],
+    imports: [_react3.default]
+  });
+
+  function _wrapComponent(id) {
+    return function (Component) {
+      return _reactTransformHmrLibIndexJs2(Component, id);
+    };
+  }
+
+  var _component = _wrapComponent("_component")((_temp = _class = function (_Component) {
+    _inherits(_class, _Component);
+
+    function _class(props) {
+      _classCallCheck(this, _class);
+
+      var _this = _possibleConstructorReturn(this, (_class.__proto__ || Object.getPrototypeOf(_class)).call(this, props));
+
+      _initialiseProps.call(_this);
+
+      var hasValue = props.hasValue,
+          focused = props.focused,
+          labelActiveScale = props.labelActiveScale,
+          labelActiveTop = props.labelActiveTop;
+      _this.state = {
+        animatedScale: new _reactNative.Animated.Value(hasValue || focused ? labelActiveScale : 1),
+        animatedTranslate: new _reactNative.Animated.Value(hasValue || focused ? labelActiveTop : 0)
+      };
+      return _this;
+    }
+
+    _createClass(_class, [{
+      key: "render",
+      value: function render() {
+        var _props = this.props,
+            focused = _props.focused,
+            paddingTop = _props.paddingTop,
+            paddingRight = _props.paddingRight,
+            paddingLeft = _props.paddingLeft,
+            activeColor = _props.activeColor,
+            fontSize = _props.fontSize,
+            fontFamily = _props.fontFamily,
+            fontWeight = _props.fontWeight,
+            label = _props.label,
+            labelColor = _props.labelColor,
+            labelActiveColor = _props.labelActiveColor,
+            error = _props.error,
+            errorColor = _props.errorColor;
+        var _state = this.state,
+            animatedScale = _state.animatedScale,
+            animatedTranslate = _state.animatedTranslate;
+        return _react3.default.createElement(
+          _reactNative.Animated.View,
+          {
+            style: {
+              position: 'absolute',
+              width: '200%',
+              marginLeft: '-100%',
+              top: paddingTop,
+              transform: [{
+                translateY: animatedTranslate
+              }, {
+                scale: animatedScale
+              }]
+            },
+            numberOfLines: 1,
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 72
+            }
+          },
+          _react3.default.createElement(
+            _reactNative.Text,
+            {
+              style: {
+                left: '50%',
+                top: 0,
+                paddingRight: paddingRight,
+                paddingLeft: paddingLeft,
+                color: error ? errorColor : focused ? activeColor || labelActiveColor : labelColor,
+                fontFamily: fontFamily,
+                fontSize: fontSize,
+                fontWeight: fontWeight
+              },
+              __source: {
+                fileName: _jsxFileName,
+                lineNumber: 81
+              }
+            },
+            label
+          )
+        );
+      }
+    }]);
+
+    return _class;
+  }(_react2.Component), _class.propTypes = {
+    label: _propTypes2.default.string,
+    labelDuration: _propTypes2.default.number,
+    labelColor: _propTypes2.default.string,
+    labelActiveColor: _propTypes2.default.string,
+    labelActiveScale: _propTypes2.default.number,
+    labelActiveTop: _propTypes2.default.number
+  }, _class.defaultProps = {
+    labelDuration: 200,
+    labelColor: 'gray',
+    labelActiveColor: '#3f51b5',
+    labelActiveScale: 0.8,
+    labelActiveTop: -18
+  }, _initialiseProps = function _initialiseProps() {
+    var _this2 = this;
+
+    this.componentWillReceiveProps = function (nextProps) {
+      var _state2 = _this2.state,
+          animatedScale = _state2.animatedScale,
+          animatedTranslate = _state2.animatedTranslate;
+      var labelDuration = nextProps.labelDuration,
+          labelActiveScale = nextProps.labelActiveScale,
+          labelActiveTop = nextProps.labelActiveTop,
+          hasValue = nextProps.hasValue,
+          focused = nextProps.focused;
+
+      if (_this2.props.hasValue !== hasValue || _this2.props.focused !== focused) {
+        _reactNative.Animated.timing(animatedScale, {
+          toValue: hasValue || focused ? labelActiveScale : 1,
+          duration: labelDuration,
+          useNativeDriver: true
+        }).start();
+
+        _reactNative.Animated.timing(animatedTranslate, {
+          toValue: hasValue || focused ? labelActiveTop : 0,
+          duration: labelDuration,
+          useNativeDriver: true
+        }).start();
+      }
+    };
+  }, _temp));
+
+  exports.default = _component;
+});

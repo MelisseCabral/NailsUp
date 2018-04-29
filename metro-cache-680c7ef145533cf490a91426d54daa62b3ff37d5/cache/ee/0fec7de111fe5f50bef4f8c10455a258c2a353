@@ -1,0 +1,43 @@
+__d(function (global, require, module, exports, _dependencyMap) {
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+
+  var _reactNavigation = require(_dependencyMap[0], "react-navigation");
+
+  var _Scheduling = require(_dependencyMap[1], "./Scheduling");
+
+  var _Scheduling2 = _interopRequireDefault(_Scheduling);
+
+  var _FormScheduling = require(_dependencyMap[2], "./FormScheduling");
+
+  var _FormScheduling2 = _interopRequireDefault(_FormScheduling);
+
+  function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+  var StackScheduling = (0, _reactNavigation.StackNavigator)({
+    Scheduling: {
+      screen: _Scheduling2.default,
+      navigationOptions: function navigationOptions(_ref) {
+        var navigation = _ref.navigation;
+        return {
+          title: '',
+          header: null
+        };
+      }
+    },
+    FormScheduling: {
+      screen: _FormScheduling2.default,
+      navigationOptions: function navigationOptions(_ref2) {
+        var navigation = _ref2.navigation;
+        return {
+          title: '',
+          header: null
+        };
+      }
+    }
+  }, {
+    headerMode: 'none'
+  });
+  exports.default = StackScheduling;
+});

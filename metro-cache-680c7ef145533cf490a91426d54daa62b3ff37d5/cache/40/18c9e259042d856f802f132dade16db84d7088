@@ -1,0 +1,13 @@
+__d(function (global, require, module, exports, _dependencyMap) {
+  module.exports = require(_dependencyMap[0], "react-native/Libraries/Image/AssetRegistry").registerAsset({
+    "__packager_asset": true,
+    "httpServerLocation": "/assets/images",
+    "width": 450,
+    "height": 600,
+    "scales": [1],
+    "hash": "59fe475b53d2ea15afe203ef24adbc32",
+    "name": "slider_6",
+    "type": "png",
+    "fileHashes": ["59fe475b53d2ea15afe203ef24adbc32"]
+  });
+});

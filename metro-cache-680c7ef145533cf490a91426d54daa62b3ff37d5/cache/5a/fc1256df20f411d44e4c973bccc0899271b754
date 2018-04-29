@@ -1,0 +1,19 @@
+__d(function (global, require, module, exports, _dependencyMap) {
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+  exports.default = {
+    messageBar: null,
+    registerMessageBar: function registerMessageBar(component) {
+      this.messageBar = component;
+    },
+    unregisterMessageBar: function unregisterMessageBar() {
+      this.messageBar = null;
+    },
+    showMessage: function showMessage(message, config) {
+      this.messageBar.pushMessage({
+        message: message
+      }, config || {});
+    }
+  };
+});

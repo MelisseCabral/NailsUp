@@ -1,0 +1,21 @@
+__d(function (global, require, module, exports, _dependencyMap) {
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+  exports.showMessage = exports.MessageBar = undefined;
+
+  var _MessageBar = require(_dependencyMap[0], "./MessageBar");
+
+  var _MessageBar2 = _interopRequireDefault(_MessageBar);
+
+  var _messageManager = require(_dependencyMap[1], "./messageManager");
+
+  var _messageManager2 = _interopRequireDefault(_messageManager);
+
+  function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+  var showMessage = _messageManager2.default.showMessage.bind(_messageManager2.default);
+
+  exports.MessageBar = _MessageBar2.default;
+  exports.showMessage = showMessage;
+});

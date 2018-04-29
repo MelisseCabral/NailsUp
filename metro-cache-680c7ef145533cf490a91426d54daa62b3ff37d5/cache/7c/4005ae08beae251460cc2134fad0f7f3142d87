@@ -1,0 +1,173 @@
+__d(function (global, require, module, exports, _dependencyMap) {
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+
+  var _react2 = require(_dependencyMap[0], "react");
+
+  var _react3 = _interopRequireDefault(_react2);
+
+  var _index = require(_dependencyMap[1], "./../../react-transform-hmr/lib/index.js");
+
+  var _index2 = _interopRequireDefault(_index);
+
+  var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+  var _class,
+      _temp2,
+      _jsxFileName = "/home/melisse/Documents/nailsup/node_modules/react-native-material-textinput/lib/Underline.js";
+
+  var _reactNative = require(_dependencyMap[2], "react-native");
+
+  var _propTypes = require(_dependencyMap[3], "prop-types");
+
+  var _propTypes2 = _interopRequireDefault(_propTypes);
+
+  function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+  function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+  function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+  function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+  var _components = {
+    _component: {}
+  };
+
+  var _reactTransformHmrLibIndexJs2 = (0, _index2.default)({
+    filename: "/home/melisse/Documents/nailsup/node_modules/react-native-material-textinput/lib/Underline.js",
+    components: _components,
+    locals: [module],
+    imports: [_react3.default]
+  });
+
+  function _wrapComponent(id) {
+    return function (Component) {
+      return _reactTransformHmrLibIndexJs2(Component, id);
+    };
+  }
+
+  var _component = _wrapComponent("_component")((_temp2 = _class = function (_Component) {
+    _inherits(_class, _Component);
+
+    function _class() {
+      var _ref;
+
+      var _temp, _this, _ret;
+
+      _classCallCheck(this, _class);
+
+      for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+        args[_key] = arguments[_key];
+      }
+
+      return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = _class.__proto__ || Object.getPrototypeOf(_class)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
+        animatedScaleX: new _reactNative.Animated.Value(_this.props.error ? 1 : 0.01),
+        animatedOpacity: new _reactNative.Animated.Value(_this.props.error ? 1 : 0)
+      }, _this.componentWillReceiveProps = function (nextProps) {
+        var _this$state = _this.state,
+            animatedScaleX = _this$state.animatedScaleX,
+            animatedOpacity = _this$state.animatedOpacity;
+        var error = nextProps.error,
+            focused = nextProps.focused,
+            underlineDuration = nextProps.underlineDuration;
+
+        if (_this.props.focused !== focused || _this.props.error !== error) {
+          var isActive = focused || error;
+          var sequence = [];
+
+          if (isActive) {
+            sequence.push(_reactNative.Animated.timing(animatedOpacity, {
+              toValue: 1,
+              duration: 0,
+              useNativeDriver: true
+            }));
+          }
+
+          sequence.push(_reactNative.Animated.timing(animatedScaleX, {
+            toValue: isActive ? 1 : 0.01,
+            duration: underlineDuration,
+            useNativeDriver: true
+          }));
+
+          if (!isActive) {
+            sequence.push(_reactNative.Animated.timing(animatedOpacity, {
+              toValue: 0,
+              duration: 0,
+              useNativeDriver: true
+            }));
+          }
+
+          if (isActive) {
+            _reactNative.Animated.parallel(sequence).start();
+          } else {
+            _reactNative.Animated.sequence(sequence).start();
+          }
+        }
+      }, _temp), _possibleConstructorReturn(_this, _ret);
+    }
+
+    _createClass(_class, [{
+      key: "render",
+      value: function render() {
+        var _props = this.props,
+            activeColor = _props.activeColor,
+            underlineHeight = _props.underlineHeight,
+            underlineColor = _props.underlineColor,
+            underlineActiveColor = _props.underlineActiveColor,
+            underlineActiveHeight = _props.underlineActiveHeight,
+            error = _props.error,
+            errorColor = _props.errorColor,
+            focused = _props.focused;
+        var _state = this.state,
+            animatedScaleX = _state.animatedScaleX,
+            animatedOpacity = _state.animatedOpacity;
+        return _react3.default.createElement(
+          _reactNative.View,
+          {
+            style: {
+              borderColor: underlineColor,
+              borderTopWidth: underlineHeight
+            },
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 84
+            }
+          },
+          _react3.default.createElement(_reactNative.Animated.View, {
+            style: {
+              marginTop: -underlineHeight,
+              transform: [{
+                scaleX: animatedScaleX
+              }],
+              opacity: animatedOpacity,
+              borderColor: error && errorColor || activeColor || underlineActiveColor,
+              borderTopWidth: underlineActiveHeight
+            },
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 89
+            }
+          })
+        );
+      }
+    }]);
+
+    return _class;
+  }(_react2.Component), _class.propTypes = {
+    underlineDuration: _propTypes2.default.number,
+    underlineHeight: _propTypes2.default.number,
+    underlineColor: _propTypes2.default.string,
+    underlineActiveColor: _propTypes2.default.string,
+    underlineActiveHeight: _propTypes2.default.number
+  }, _class.defaultProps = {
+    underlineDuration: 200,
+    underlineHeight: 1,
+    underlineColor: 'gray',
+    underlineActiveColor: '#3f51b5',
+    underlineActiveHeight: 2
+  }, _temp2));
+
+  exports.default = _component;
+});

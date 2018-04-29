@@ -1,0 +1,326 @@
+__d(function (global, require, module, exports, _dependencyMap) {
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+
+  var _react2 = require(_dependencyMap[0], "react");
+
+  var _react3 = _interopRequireDefault(_react2);
+
+  var _index = require(_dependencyMap[1], "./../node_modules/react-transform-hmr/lib/index.js");
+
+  var _index2 = _interopRequireDefault(_index);
+
+  var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+  var _class,
+      _temp,
+      _jsxFileName = "/home/melisse/Documents/nailsup/Screens/ServiceByCategory.js";
+
+  var _reactNative = require(_dependencyMap[2], "react-native");
+
+  var _FontAwesome = require(_dependencyMap[3], "@expo/vector-icons/FontAwesome");
+
+  var _FontAwesome2 = _interopRequireDefault(_FontAwesome);
+
+  var _reactNavigation = require(_dependencyMap[4], "react-navigation");
+
+  var _reactNativeMessages = require(_dependencyMap[5], "react-native-messages");
+
+  function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+  function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+  function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+  function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+  var _components = {
+    ServiceByCategory: {
+      displayName: "ServiceByCategory"
+    }
+  };
+
+  var _node_modulesReactTransformHmrLibIndexJs2 = (0, _index2.default)({
+    filename: "/home/melisse/Documents/nailsup/Screens/ServiceByCategory.js",
+    components: _components,
+    locals: [module],
+    imports: [_react3.default]
+  });
+
+  function _wrapComponent(id) {
+    return function (Component) {
+      return _node_modulesReactTransformHmrLibIndexJs2(Component, id);
+    };
+  }
+
+  var _Dimensions$get = _reactNative.Dimensions.get('window'),
+      width = _Dimensions$get.width,
+      height = _Dimensions$get.height;
+
+  var ServiceByCategory = _wrapComponent("ServiceByCategory")((_temp = _class = function (_React$Component) {
+    _inherits(ServiceByCategory, _React$Component);
+
+    function ServiceByCategory() {
+      _classCallCheck(this, ServiceByCategory);
+
+      return _possibleConstructorReturn(this, (ServiceByCategory.__proto__ || Object.getPrototypeOf(ServiceByCategory)).apply(this, arguments));
+    }
+
+    _createClass(ServiceByCategory, [{
+      key: "render",
+      value: function render() {
+        var params = this.props.navigation.state.params;
+        var category = params ? params.category : null;
+        return _react3.default.createElement(
+          _reactNative.View,
+          {
+            style: styles.container,
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 23
+            }
+          },
+          _react3.default.createElement(
+            _reactNative.ScrollView,
+            {
+              __source: {
+                fileName: _jsxFileName,
+                lineNumber: 24
+              }
+            },
+            _react3.default.createElement(
+              _reactNative.View,
+              {
+                style: styles.container,
+                __source: {
+                  fileName: _jsxFileName,
+                  lineNumber: 25
+                }
+              },
+              _react3.default.createElement(
+                _reactNative.ImageBackground,
+                {
+                  style: styles.imgBg,
+                  source: {
+                    uri: 'https://www.w3schools.com/w3css/img_fjords.jpg'
+                  },
+                  __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 26
+                  }
+                },
+                _react3.default.createElement(
+                  _reactNative.Text,
+                  {
+                    style: styles.welcome,
+                    __source: {
+                      fileName: _jsxFileName,
+                      lineNumber: 30
+                    }
+                  },
+                  category
+                )
+              )
+            ),
+            _react3.default.createElement(
+              _reactNative.View,
+              {
+                style: styles.containerCard,
+                __source: {
+                  fileName: _jsxFileName,
+                  lineNumber: 35
+                }
+              },
+              _react3.default.createElement(
+                _reactNative.View,
+                {
+                  style: styles.rowCard,
+                  __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 36
+                  }
+                },
+                _react3.default.createElement(
+                  _reactNative.View,
+                  {
+                    style: styles.alignLeft,
+                    __source: {
+                      fileName: _jsxFileName,
+                      lineNumber: 37
+                    }
+                  },
+                  _react3.default.createElement(
+                    _reactNative.Text,
+                    {
+                      style: styles.titleBox,
+                      __source: {
+                        fileName: _jsxFileName,
+                        lineNumber: 38
+                      }
+                    },
+                    " Servi\xE7o"
+                  ),
+                  _react3.default.createElement(
+                    _reactNative.Text,
+                    {
+                      style: styles.thlBox,
+                      __source: {
+                        fileName: _jsxFileName,
+                        lineNumber: 39
+                      }
+                    },
+                    " Descri\xE7\xE3o"
+                  ),
+                  _react3.default.createElement(
+                    _reactNative.View,
+                    {
+                      style: styles.alignLeftDuration,
+                      __source: {
+                        fileName: _jsxFileName,
+                        lineNumber: 40
+                      }
+                    },
+                    _react3.default.createElement(
+                      _reactNative.Text,
+                      {
+                        style: styles.textPrice,
+                        __source: {
+                          fileName: _jsxFileName,
+                          lineNumber: 41
+                        }
+                      },
+                      " Dura\xE7\xE3o: 15min, R$ 30,00"
+                    )
+                  )
+                ),
+                _react3.default.createElement(
+                  _reactNative.TouchableHighlight,
+                  {
+                    style: styles.alignRight,
+                    underlayColor: "transparent",
+                    onPress: function onPress() {
+                      return (0, _reactNativeMessages.showMessage)('Serviço adicionado com sucesso!');
+                    },
+                    __source: {
+                      fileName: _jsxFileName,
+                      lineNumber: 45
+                    }
+                  },
+                  _react3.default.createElement(_FontAwesome2.default, {
+                    name: "plus-circle",
+                    size: 25,
+                    style: styles.icons,
+                    color: "#da5353",
+                    __source: {
+                      fileName: _jsxFileName,
+                      lineNumber: 48
+                    }
+                  })
+                )
+              )
+            )
+          ),
+          _react3.default.createElement(_reactNativeMessages.MessageBar, {
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 53
+            }
+          })
+        );
+      }
+    }]);
+
+    return ServiceByCategory;
+  }(_react3.default.Component), _class.navigationOptions = function (_ref) {
+    var navigation = _ref.navigation,
+        screenProps = _ref.screenProps;
+    return {
+      title: "Login Page",
+      headerMode: 'screen'
+    };
+  }, _temp));
+
+  exports.default = ServiceByCategory;
+
+  var styles = _reactNative.StyleSheet.create({
+    container: {
+      flex: 1,
+      backgroundColor: '#ffd8d8',
+      alignItems: 'center'
+    },
+    containerCard: {
+      flexDirection: 'row',
+      flex: 1,
+      backgroundColor: "#fff",
+      width: width - 20,
+      margin: 10,
+      height: 100,
+      borderRadius: 3
+    },
+    rowCard: {
+      marginTop: 10,
+      flexDirection: 'row',
+      height: 50
+    },
+    containerPrice: {
+      width: width,
+      height: 25,
+      justifyContent: 'center',
+      backgroundColor: '#fff',
+      paddingLeft: 10
+    },
+    textPrice: {
+      color: '#da5353'
+    },
+    containerDuration: {
+      height: 25,
+      justifyContent: 'center',
+      backgroundColor: '#fff',
+      paddingLeft: 10
+    },
+    alignRight: {
+      marginTop: 10,
+      marginRight: 10,
+      justifyContent: 'flex-end',
+      alignSelf: 'flex-end'
+    },
+    alignLeft: {
+      marginLeft: 10,
+      marginTop: 10,
+      width: width * 0.5,
+      justifyContent: 'center',
+      alignSelf: 'flex-start'
+    },
+    alignLeftDuration: {
+      marginTop: 10,
+      width: (width - 60) * 0.7,
+      justifyContent: 'center',
+      alignSelf: 'flex-start'
+    },
+    welcome: {
+      margin: 20,
+      color: '#fff'
+    },
+    imgBg: {
+      width: width,
+      height: 170,
+      justifyContent: 'flex-end'
+    },
+    columns: {
+      marginTop: 5
+    },
+    thlBox: {
+      color: '#c48c3a'
+    },
+    titleBox: {
+      color: '#c48c3a',
+      fontWeight: 'bold',
+      paddingTop: 3,
+      marginBottom: 3
+    },
+    icons: {
+      marginLeft: 100
+    }
+  });
+});

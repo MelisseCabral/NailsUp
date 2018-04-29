@@ -1,0 +1,43 @@
+__d(function (global, require, module, exports, _dependencyMap) {
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+
+  var _reactNavigation = require(_dependencyMap[0], "react-navigation");
+
+  var _Services = require(_dependencyMap[1], "./Services");
+
+  var _Services2 = _interopRequireDefault(_Services);
+
+  var _ServiceByCategory = require(_dependencyMap[2], "./ServiceByCategory");
+
+  var _ServiceByCategory2 = _interopRequireDefault(_ServiceByCategory);
+
+  function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+  var StackServices = (0, _reactNavigation.StackNavigator)({
+    Services: {
+      screen: _Services2.default,
+      navigationOptions: function navigationOptions(_ref) {
+        var navigation = _ref.navigation;
+        return {
+          title: '',
+          header: null
+        };
+      }
+    },
+    ServiceByCategory: {
+      screen: _ServiceByCategory2.default,
+      navigationOptions: function navigationOptions(_ref2) {
+        var navigation = _ref2.navigation;
+        return {
+          title: '',
+          header: null
+        };
+      }
+    }
+  }, {
+    headerMode: 'none'
+  });
+  exports.default = StackServices;
+});
