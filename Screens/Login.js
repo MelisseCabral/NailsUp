@@ -1,6 +1,11 @@
 import React from 'react';
-import { StyleSheet, Text, View, Button, AppRegistry, Image, ImageBackground, ScrollView, TouchableHighlight } from 'react-native';
-import TabNavigator from 'react-native-tab-navigator';
+import { StyleSheet, 
+        Text, 
+        View, 
+        Button, 
+        Image, 
+        ImageBackground, 
+        TouchableHighlight, CheckBox} from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import { Dimensions } from 'react-native';
 import { StackNavigator } from 'react-navigation';
@@ -83,51 +88,59 @@ export default class FormLogin extends React.Component {
         return (
 
             <View style={styles.container}>
-                <ScrollView>
-                    <View style={styles.containerCard}>
-                        <Text style={styles.titleBox}> Login</Text>
-
-                        <TextInput
-                            style={styles.textInputForm}
-                            label="Email"
-                            labelColor='gray'
-                            width={width - 60}
-                            underlineActiveColor="#da5353"
-                            activeColor="#da5353"
-                            value={this.state.email}
-                            onChangeText={email => this.setState({ email })}
-                            onSubmitEditing={() => this.passwordInput.focus()}
-                            ref={(input)=> this.userInput = input}  
-                        />
-                        <TextInput
-                            style={styles.textInputForm}
-                            label="Senha"
-                            labelColor='gray'
-                            width={width - 60}
-                            underlineActiveColor="#da5353"
-                            activeColor="#da5353"
-                            secureTextEntry
-                            value={this.state.password}
-                            onChangeText={password => this.setState({ password })}
-                            onSubmitEditing={() => this.onLoginPress()}
-                            ref={(input)=> this.userInput = input}  
-                        />
-                       
-
-                        <View style={styles.alignRightBottom}>
-                            <TouchableHighlight style={styles.circleBtn}
-                                underlayColor='transparent'
-                                onPress={this.onLoginPress.bind(this)}>
+                <ImageBackground
+                                style={styles.imgBg}
+                                source={require('./../images/bgLogin.png')}
+                            >
+                                <Image style={styles.userPhoto} source={require('./../images/user.png')} />
+                                
+                                <TextInput
+                                    style={styles.textInputForm}
+                                    label="Email"
+                                    labelColor='#fff'
+                                    inputColor="#fff"
+                                    underlineColor="#fff"
+                                    width={width - 60}
+                                    underlineActiveColor="#fff"
+                                    activeColor="#fff"
+                                    value={this.state.email}
+                                    onChangeText={email => this.setState({ email })}
+                                    onSubmitEditing={() => this.passwordInput.focus()}
+                                    ref={(input)=> this.userInput = input}  
+                                />
+                                <TextInput
+                                    style={styles.textInputForm}
+                                    label="Senha"
+                                    labelColor='#fff'
+                                    underlineColor="#fff"
+                                    width={width - 60}
+                                    underlineActiveColor="#fff"
+                                    activeColor="#fff"
+                                    secureTextEntry
+                                    value={this.state.password}
+                                    onChangeText={password => this.setState({ password })}
+                                    onSubmitEditing={() => this.onLoginPress()}
+                                    ref={(input)=> this.userInput = input}  
+                                />
                                 <View style={styles.Row}>
-                                    <Icon name="arrow-right" style={styles.iconCircle} size={25} color="#da5353" />
-                                    <Text style={styles.TextBtn}>Login</Text>
+                                    
+                                    <TouchableHighlight style={styles.btnForgetPass}
+                                        underlayColor='transparent'
+                                        onPress={this.onLoginPress.bind(this)}>
+                                        <View style={styles.Row}>
+                                            <Text style={styles.TextBtn}>Esqueci a senha</Text>
+                                        </View>
+                                    </TouchableHighlight>
+                                    <View style={styles.alignRightBottom}>
+                                        <TouchableHighlight style={styles.circleBtn}
+                                            underlayColor='transparent'
+                                            onPress={this.onLoginPress.bind(this)}>
+                                            <Text style={styles.TextBtn}>Login</Text>
+                                        </TouchableHighlight>
+                                    </View>
                                 </View>
-                            </TouchableHighlight>
-                        </View>
-                    </View>
-
-
-                </ScrollView >
+                                
+                        </ImageBackground>
                 <MessageBar />
             </View >
         )
@@ -135,35 +148,40 @@ export default class FormLogin extends React.Component {
 }
 
 const styles = StyleSheet.create({
+    chkBox:{
+        backgroundColor: "transparent"
+    },
+    btnForgetPass:{
+        paddingLeft: width *0.08
+    },
     container: {
         flex: 1,
         backgroundColor: '#ffd8d8',
         alignItems: 'center',
         justifyContent: 'center',
-        marginTop: 20,
+        paddingTop: 20,
     },
     textInputForm: {
         width: 240,
 
     },
     TextBtn: {
-        color: '#da5353'
+        color: '#fff'
     },
     Row: {
         margin: 10,
+        paddingRight: width *0.05,
         flexDirection: 'row',
         alignItems: 'center',
         justifyContent: 'center',
     },
     containerCard: {
-        alignItems: 'center',
-        justifyContent: 'center',
-        flex: 1,
+        
         backgroundColor: "#fff",
         width: width - 20,
         margin: 10,
         marginBottom: 5,
-        height: height * 0.6, // somar n*100 onde 100 é numero de itens no carrinho
+        height: height * 0.85, // somar n*100 onde 100 é numero de itens no carrinho
         borderRadius: 5,
     },
     alignRight: {
@@ -181,9 +199,10 @@ const styles = StyleSheet.create({
         borderColor: 'gray'
     },
     alignRightBottom: {
-        margin: 10,
-        justifyContent: 'flex-end',
-        alignSelf: 'flex-end',
+        marginLeft: 20,
+        marginRight: 20,
+        marginTop: 10,
+        
     },
     alignLeft: {
         marginLeft: 20,
@@ -195,10 +214,11 @@ const styles = StyleSheet.create({
         color: '#fff',
         fontWeight: 'bold'
     },
-    imgBg: {
-        width: width,
-        height: 170,
-        justifyContent: 'flex-end'
+    userPhoto: {
+        width: width * 0.25,
+        height: width * 0.25,
+        justifyContent: 'flex-end',
+        margin: 10,
     },
     columns: {
         marginTop: 5
@@ -227,21 +247,22 @@ const styles = StyleSheet.create({
 
     },
     circleBtn: {
-        borderRadius: 50,
-        borderWidth: 1,
-        borderColor: '#da5353',
+        borderRadius: 25,
+        borderWidth: 2,
+        borderColor: '#fff',
         alignItems: 'center',
         justifyContent: 'center',
         width: 100,
         height: 50,
-        backgroundColor: '#fff',
+        backgroundColor: 'transparent',
         marginRight: 10,
 
     },
     imgBg: {
         width: width,
-        height: 170,
-        justifyContent: 'flex-end'
+        height: height,
+        alignItems: 'center',
+        justifyContent: 'center',
     },
     containerPrice: {
         width: width - 60,

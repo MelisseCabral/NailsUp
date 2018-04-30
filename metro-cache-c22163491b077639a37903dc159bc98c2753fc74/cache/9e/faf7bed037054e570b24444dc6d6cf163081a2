@@ -1,0 +1,20 @@
+__d(function (global, require, module, exports, _dependencyMap) {
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+  exports.CheckboxField = exports.Checkbox = undefined;
+
+  var _Checkbox = require(_dependencyMap[0], "./Checkbox");
+
+  var _Checkbox2 = _interopRequireDefault(_Checkbox);
+
+  var _CheckboxField = require(_dependencyMap[1], "./CheckboxField");
+
+  var _CheckboxField2 = _interopRequireDefault(_CheckboxField);
+
+  function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+  exports.default = _CheckboxField2.default;
+  exports.Checkbox = _Checkbox2.default;
+  exports.CheckboxField = _CheckboxField2.default;
+});

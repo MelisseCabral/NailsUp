@@ -1,0 +1,186 @@
+__d(function (global, require, module, exports, _dependencyMap) {
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+
+  var _react2 = require(_dependencyMap[0], "react");
+
+  var _react3 = _interopRequireDefault(_react2);
+
+  var _index = require(_dependencyMap[1], "./../react-transform-hmr/lib/index.js");
+
+  var _index2 = _interopRequireDefault(_index);
+
+  var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+  var _class,
+      _temp,
+      _jsxFileName = "/home/mel/Documents/nailsup/node_modules/react-native-checkbox-field/CheckboxField.js";
+
+  var _propTypes = require(_dependencyMap[2], "prop-types");
+
+  var _propTypes2 = _interopRequireDefault(_propTypes);
+
+  var _reactNative = require(_dependencyMap[3], "react-native");
+
+  var _Styles = require(_dependencyMap[4], "./Styles");
+
+  var _Styles2 = _interopRequireDefault(_Styles);
+
+  var _Checkbox = require(_dependencyMap[5], "./Checkbox");
+
+  var _Checkbox2 = _interopRequireDefault(_Checkbox);
+
+  function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+  function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+  function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+  function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+  var _components = {
+    CheckboxField: {
+      displayName: "CheckboxField"
+    }
+  };
+
+  var _reactTransformHmrLibIndexJs2 = (0, _index2.default)({
+    filename: "/home/mel/Documents/nailsup/node_modules/react-native-checkbox-field/CheckboxField.js",
+    components: _components,
+    locals: [module],
+    imports: [_react3.default]
+  });
+
+  function _wrapComponent(id) {
+    return function (Component) {
+      return _reactTransformHmrLibIndexJs2(Component, id);
+    };
+  }
+
+  var CheckboxField = _wrapComponent("CheckboxField")((_temp = _class = function (_Component) {
+    _inherits(CheckboxField, _Component);
+
+    function CheckboxField() {
+      _classCallCheck(this, CheckboxField);
+
+      return _possibleConstructorReturn(this, (CheckboxField.__proto__ || Object.getPrototypeOf(CheckboxField)).apply(this, arguments));
+    }
+
+    _createClass(CheckboxField, [{
+      key: "render",
+      value: function render() {
+        var _props = this.props,
+            onSelect = _props.onSelect,
+            disabled = _props.disabled,
+            containerStyle = _props.containerStyle,
+            labelSide = _props.labelSide,
+            labelStyle = _props.labelStyle,
+            label = _props.label,
+            selected = _props.selected,
+            defaultColor = _props.defaultColor,
+            selectedColor = _props.selectedColor,
+            disabledColor = _props.disabledColor,
+            checkboxStyle = _props.checkboxStyle,
+            children = _props.children;
+        return _react3.default.createElement(
+          _reactNative.TouchableOpacity,
+          {
+            onPress: onSelect,
+            disabled: disabled,
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 63
+            }
+          },
+          _react3.default.createElement(
+            _reactNative.View,
+            {
+              style: containerStyle,
+              __source: {
+                fileName: _jsxFileName,
+                lineNumber: 64
+              }
+            },
+            labelSide === 'left' ? _react3.default.createElement(
+              _reactNative.Text,
+              {
+                style: labelStyle,
+                __source: {
+                  fileName: _jsxFileName,
+                  lineNumber: 66
+                }
+              },
+              label
+            ) : null,
+            _react3.default.createElement(
+              _Checkbox2.default,
+              {
+                selected: selected,
+                disabled: disabled,
+                onSelect: onSelect,
+                defaultColor: defaultColor,
+                selectedColor: selectedColor,
+                disabledColor: disabledColor,
+                checkboxStyle: checkboxStyle,
+                __source: {
+                  fileName: _jsxFileName,
+                  lineNumber: 68
+                }
+              },
+              children
+            ),
+            labelSide === 'right' ? _react3.default.createElement(
+              _reactNative.Text,
+              {
+                style: [labelStyle, {
+                  textAlign: 'right'
+                }],
+                __source: {
+                  fileName: _jsxFileName,
+                  lineNumber: 80
+                }
+              },
+              label
+            ) : null
+          )
+        );
+      }
+    }]);
+
+    return CheckboxField;
+  }(_react2.Component), _class.propTypes = {
+    label: _propTypes2.default.string,
+    containerStyle: _propTypes2.default.oneOfType([_propTypes2.default.number, _propTypes2.default.object, _propTypes2.default.array]),
+    labelStyle: _propTypes2.default.oneOfType([_propTypes2.default.number, _propTypes2.default.object, _propTypes2.default.array]),
+    labelSide: _propTypes2.default.oneOf(['left', 'right']),
+    defaultColor: _propTypes2.default.string,
+    selectedColor: _propTypes2.default.string,
+    disabledColor: _propTypes2.default.string,
+    selected: _propTypes2.default.bool,
+    onSelect: _propTypes2.default.func.isRequired,
+    checkboxStyle: _propTypes2.default.oneOfType([_propTypes2.default.number, _propTypes2.default.object, _propTypes2.default.array]),
+    children: _propTypes2.default.element.isRequired,
+    disabled: _propTypes2.default.bool
+  }, _class.defaultProps = {
+    containerStyle: {
+      flex: 1,
+      flexDirection: 'row',
+      padding: 20,
+      alignItems: 'center'
+    },
+    label: null,
+    labelStyle: {
+      flex: 1
+    },
+    checkboxStyle: _Styles2.default.checkboxStyle,
+    defaultColor: _Styles2.default.defaultColor,
+    disabledColor: _Styles2.default.disabledColor,
+    selectedColor: _Styles2.default.selectedColor,
+    labelSide: 'left',
+    disabled: false,
+    selected: false
+  }, _temp));
+
+  exports.default = CheckboxField;
+});
