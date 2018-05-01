@@ -110,13 +110,8 @@ __d(function (global, require, module, exports, _dependencyMap) {
                         error: '',
                         loading: false
                     });
-                }).catch(function () {
-                    _this2.setState({
-                        error: 'Falha de autenticação.',
-                        loading: false
-                    });
-
-                    (0, _reactNativeMessages.showMessage)('Login falhou!');
+                }).catch(function (error) {
+                    (0, _reactNativeMessages.showMessage)(error.message);
                 });
             }
         }, {
@@ -131,7 +126,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
                         style: styles.container,
                         __source: {
                             fileName: _jsxFileName,
-                            lineNumber: 55
+                            lineNumber: 56
                         }
                     },
                     _react3.default.createElement(
@@ -141,7 +136,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
                             source: require(_dependencyMap[9], './../images/bgLogin.png'),
                             __source: {
                                 fileName: _jsxFileName,
-                                lineNumber: 56
+                                lineNumber: 57
                             }
                         },
                         _react3.default.createElement(_reactNative.Image, {
@@ -149,13 +144,14 @@ __d(function (global, require, module, exports, _dependencyMap) {
                             source: require(_dependencyMap[10], './../images/app.png'),
                             __source: {
                                 fileName: _jsxFileName,
-                                lineNumber: 60
+                                lineNumber: 61
                             }
                         }),
                         _react3.default.createElement(_reactNativeMaterialTextinput2.default, {
                             style: styles.textInputForm,
                             label: "Email",
                             labelColor: "#fff",
+                            textColor: "rgba(255,255,255, 0.9)",
                             underlineColor: "#fff",
                             width: width - 60,
                             underlineActiveColor: "#fff",
@@ -174,7 +170,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
                             },
                             __source: {
                                 fileName: _jsxFileName,
-                                lineNumber: 62
+                                lineNumber: 63
                             }
                         }),
                         _react3.default.createElement(_reactNativeMaterialTextinput2.default, {
@@ -200,7 +196,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
                             },
                             __source: {
                                 fileName: _jsxFileName,
-                                lineNumber: 75
+                                lineNumber: 77
                             }
                         }),
                         _react3.default.createElement(
@@ -209,7 +205,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
                                 style: styles.Row,
                                 __source: {
                                     fileName: _jsxFileName,
-                                    lineNumber: 89
+                                    lineNumber: 91
                                 }
                             },
                             _react3.default.createElement(
@@ -220,7 +216,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
                                     onPress: this.onLoginPress.bind(this),
                                     __source: {
                                         fileName: _jsxFileName,
-                                        lineNumber: 91
+                                        lineNumber: 93
                                     }
                                 },
                                 _react3.default.createElement(
@@ -229,7 +225,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
                                         style: styles.Row,
                                         __source: {
                                             fileName: _jsxFileName,
-                                            lineNumber: 94
+                                            lineNumber: 96
                                         }
                                     },
                                     _react3.default.createElement(
@@ -238,7 +234,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
                                             style: styles.TextBtn,
                                             __source: {
                                                 fileName: _jsxFileName,
-                                                lineNumber: 95
+                                                lineNumber: 97
                                             }
                                         },
                                         "Esqueci a senha"
@@ -251,7 +247,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
                                     style: styles.alignRightBottom,
                                     __source: {
                                         fileName: _jsxFileName,
-                                        lineNumber: 98
+                                        lineNumber: 100
                                     }
                                 },
                                 _react3.default.createElement(
@@ -262,7 +258,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
                                         onPress: this.onLoginPress.bind(this),
                                         __source: {
                                             fileName: _jsxFileName,
-                                            lineNumber: 99
+                                            lineNumber: 101
                                         }
                                     },
                                     _react3.default.createElement(
@@ -271,7 +267,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
                                             style: styles.TextBtn,
                                             __source: {
                                                 fileName: _jsxFileName,
-                                                lineNumber: 102
+                                                lineNumber: 104
                                             }
                                         },
                                         "Login"
@@ -283,7 +279,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
                     _react3.default.createElement(_reactNativeMessages.MessageBar, {
                         __source: {
                             fileName: _jsxFileName,
-                            lineNumber: 108
+                            lineNumber: 110
                         }
                     })
                 );
@@ -317,8 +313,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
             paddingTop: 20
         },
         textInputForm: {
-            width: 240,
-            textColor: "#fff"
+            width: 240
         },
         TextBtn: {
             color: '#fff'
