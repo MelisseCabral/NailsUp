@@ -36,15 +36,16 @@ export default class FormLogin extends React.Component {
       
         const password = this.state.password;
         const email = this.state.email;
-    
+        
+        
         firebase.auth().signInWithEmailAndPassword(email, password)
         .then(() => {
             this.props.navigation.navigate('PanelUser');
             this.setState({ error: '', loading: false});
         })
-        .catch(() => {
-            this.setState({error: 'Falha de autenticação.', loading: false})
-            showMessage('Login falhou!')
+        .catch(function (error){
+            this.setState({error: 'Falha na autenticacao.', loading: false})
+            showMessage(error.message);
         })
     };
 

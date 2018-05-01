@@ -38,8 +38,9 @@ export default class SignUp extends React.Component {
       this.props.navigation.navigate('PanelUser');
       this.setState({error: '', loading: false});
     })
-    .catch(() => {
+    .catch(function (error) {
         this.setState({error: 'Falha ao criar usuario.', loading: false})
+        showMessage(error.message);
     })
   };
     render() {
