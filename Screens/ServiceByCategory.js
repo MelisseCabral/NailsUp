@@ -11,7 +11,7 @@ var { width, height } = Dimensions.get('window');
 export default class ServiceByCategory extends React.Component {
 
   static navigationOptions = ({ navigation, screenProps }) => ({
-    title: "Login Page",
+    title: "",
     headerMode: 'screen'
   });
 

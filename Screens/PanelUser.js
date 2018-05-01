@@ -18,10 +18,20 @@ import TextInput from 'react-native-material-textinput';
 
 var { width, height } = Dimensions.get('window');
 
-export default class FormLogin extends React.Component {
+export default class PanelUser extends React.Component {
   constructor() {
     super();
   }
+  onLogoutPress() {
+    this.setState({ error: '', loading: true});
+  
+    firebase.auth().signOut().then(() => {
+        this.props.navigation.navigate('HomeUser');
+      }).catch(() => {
+        this.setState({error: 'Falha de autenticação.', loading: false})
+        showMessage('Logout falhou!');
+    })
+};
   static navigationOptions = ({ navigation, screenProps }) => ({
       title: "",
       headerMode: 'screen'
@@ -35,19 +45,14 @@ export default class FormLogin extends React.Component {
                                 style={styles.imgBg}
                                 source={require('./../images/bgLogin.png')}
                             >
-                              <Image style={styles.photo} source={require('./../images/app.png')} />
-                                
-                              <TouchableHighlight style={styles.circleBtn}
+                              <Image style={styles.photo} source={require('./../images/user.png')} />
+                              <View style={styles.alignRightBottom}>
+                                        <TouchableHighlight style={styles.circleBtn}
                                             underlayColor='transparent'
-                                            onPress={() => navigate('LoginForm', {})}>
-                                            <Text style={styles.TextBtn}>Login</Text>
-                              </TouchableHighlight>
-                              <TouchableHighlight style={styles.circleBtn}
-                                            underlayColor='transparent'
-                                            onPress={() => navigate('SignUp', {})}>
-                                            <Text style={styles.TextBtn}>Cadastre-se</Text>
-                              </TouchableHighlight>
-                                
+                                            onPress={this.onLogoutPress.bind(this)}>
+                                            <Text style={styles.TextBtn}>Sair</Text>
+                                        </TouchableHighlight>
+                                </View>
                         </ImageBackground>
                 <MessageBar />
             </View >

@@ -21,14 +21,6 @@ __d(function (global, require, module, exports, _dependencyMap) {
 
   function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-  var config = {
-    apiKey: "AIzaSyCi2kQbt9xjCcvu7x-OUaoxA0gH9lwxz3c",
-    authDomain: "nailsup-7e965.firebaseapp.com",
-    databaseURL: "https://nailsup-7e965.firebaseio.com",
-    projectId: "nailsup-7e965",
-    storageBucket: "",
-    messagingSenderId: "118066102064"
-  };
   var App = (0, _reactNavigation.StackNavigator)({
     HomeScreen: {
       screen: _TabHome2.default,

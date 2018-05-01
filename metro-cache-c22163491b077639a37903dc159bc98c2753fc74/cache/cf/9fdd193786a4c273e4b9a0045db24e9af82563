@@ -13,11 +13,19 @@ __d(function (global, require, module, exports, _dependencyMap) {
 
   var _SignUp2 = _interopRequireDefault(_SignUp);
 
+  var _HomeUser = require(_dependencyMap[3], "./HomeUser");
+
+  var _HomeUser2 = _interopRequireDefault(_HomeUser);
+
+  var _PanelUser = require(_dependencyMap[4], "./PanelUser");
+
+  var _PanelUser2 = _interopRequireDefault(_PanelUser);
+
   function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
   var StackUser = (0, _reactNavigation.StackNavigator)({
-    LoginForm: {
-      screen: _Login2.default,
+    HomeUser: {
+      screen: _HomeUser2.default,
       navigationOptions: function navigationOptions(_ref) {
         var navigation = _ref.navigation;
         return {
@@ -26,8 +34,8 @@ __d(function (global, require, module, exports, _dependencyMap) {
         };
       }
     },
-    SignUp: {
-      screen: _SignUp2.default,
+    LoginForm: {
+      screen: _Login2.default,
       navigationOptions: function navigationOptions(_ref2) {
         var navigation = _ref2.navigation;
         return {
@@ -36,10 +44,20 @@ __d(function (global, require, module, exports, _dependencyMap) {
         };
       }
     },
-    HomeUser: {
+    SignUp: {
       screen: _SignUp2.default,
       navigationOptions: function navigationOptions(_ref3) {
         var navigation = _ref3.navigation;
+        return {
+          title: '',
+          header: null
+        };
+      }
+    },
+    PanelUser: {
+      screen: _PanelUser2.default,
+      navigationOptions: function navigationOptions(_ref4) {
+        var navigation = _ref4.navigation;
         return {
           title: '',
           header: null

@@ -236,7 +236,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
     var navigation = _ref.navigation,
         screenProps = _ref.screenProps;
     return {
-      title: "Login Page",
+      title: "",
       headerMode: 'screen'
     };
   }, _temp));

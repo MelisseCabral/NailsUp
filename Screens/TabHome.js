@@ -4,6 +4,7 @@ import TabNavigator from 'react-native-tab-navigator';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import {Dimensions} from 'react-native';
 import { StackNavigator} from 'react-navigation';
+import firebase from 'firebase';
 
 import Home from './Home';
 import StackUser from './StackUser';
@@ -32,6 +33,16 @@ export default class TabHome extends React.Component {
       title: '',
       header: null
     };
+    componentWillMount() {
+      firebase.initializeApp({
+          apiKey: "AIzaSyCi2kQbt9xjCcvu7x-OUaoxA0gH9lwxz3c",
+          authDomain: "nailsup-7e965.firebaseapp.com",
+          databaseURL: "https://nailsup-7e965.firebaseio.com",
+          projectId: "nailsup-7e965",
+          storageBucket: "",
+          messagingSenderId: "118066102064"
+      });
+    }
     render() {
         const{navigate} = this.props.navigation;
       return (

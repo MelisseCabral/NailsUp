@@ -26,17 +26,10 @@ export default class FormLogin extends React.Component {
         super(props);
         this.state = {email: '', password: '', error:'', loading:false};
     }
-
-    componentWillMount() {
-        firebase.initializeApp({
-            apiKey: "AIzaSyCi2kQbt9xjCcvu7x-OUaoxA0gH9lwxz3c",
-            authDomain: "nailsup-7e965.firebaseapp.com",
-            databaseURL: "https://nailsup-7e965.firebaseio.com",
-            projectId: "nailsup-7e965",
-            storageBucket: "",
-            messagingSenderId: "118066102064"
-        });
-    }
+    static navigationOptions = ({ navigation, screenProps }) => ({
+        title: "",
+        headerMode: 'screen'
+      });
     
     onLoginPress() {
         this.setState({ error: '', loading: true});
@@ -46,7 +39,7 @@ export default class FormLogin extends React.Component {
     
         firebase.auth().signInWithEmailAndPassword(email, password)
         .then(() => {
-            this.props.navigation.navigate('HomeUser');
+            this.props.navigation.navigate('PanelUser');
             this.setState({ error: '', loading: false});
         })
         .catch(() => {
@@ -55,36 +48,8 @@ export default class FormLogin extends React.Component {
         })
     };
 
-    onLogoutPress() {
-        this.setState({ error: '', loading: true});
-      
-        const password = this.state.password;
-        const email = this.state.email;
-    
-        firebase.auth().signInWithEmailAndPassword(email, password)
-        .then(() => {
-          this.renderLogin();
-          this.setState({ error: '', loading: false});
-        })
-        .catch(() => {
-            this.setState({error: 'Falha de autenticação.', loading: false})
-            showMessage('Logout falhou!');
-        })
-    };
-
-    renderLogin() {
-        return <TouchableHighlight style={styles.circleBtn}
-                    underlayColor='transparent'
-                    onPress={this.onLoginPress.bind(this)}>
-                    <View style={styles.Row}>
-                        <Icon name="arrow-right" style={styles.iconCircle} size={25} color="#da5353" />
-                        <Text style={styles.TextBtn}>Cadastro</Text>
-                    </View>
-                </TouchableHighlight>;
-    }
-
     render() {
-        
+        const navigate = this.props.navigation;
         return (
 
             <View style={styles.container}>
@@ -92,13 +57,13 @@ export default class FormLogin extends React.Component {
                                 style={styles.imgBg}
                                 source={require('./../images/bgLogin.png')}
                             >
-                                <Image style={styles.userPhoto} source={require('./../images/user.png')} />
+                                <Image style={styles.userPhoto} source={require('./../images/app.png')} />
                                 
                                 <TextInput
                                     style={styles.textInputForm}
                                     label="Email"
                                     labelColor='#fff'
-                                    inputColor="#fff"
+                                    textColor="rgba(255,255,255, 0.9)"
                                     underlineColor="#fff"
                                     width={width - 60}
                                     underlineActiveColor="#fff"
@@ -215,10 +180,10 @@ const styles = StyleSheet.create({
         fontWeight: 'bold'
     },
     userPhoto: {
-        width: width * 0.25,
-        height: width * 0.25,
-        justifyContent: 'flex-end',
-        margin: 10,
+        width: width * 0.2,
+        height: height * 0.2,
+        resizeMode: 'center',
+        marginBottom: height *0.1
     },
     columns: {
         marginTop: 5

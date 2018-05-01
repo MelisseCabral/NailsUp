@@ -11,9 +11,11 @@ __d(function (global, require, module, exports, _dependencyMap) {
 
     var _index2 = _interopRequireDefault(_index);
 
-    var _jsxFileName = "/home/mel/Documents/nailsup/Screens/Login.js";
-
     var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+    var _class,
+        _temp,
+        _jsxFileName = "/home/mel/Documents/nailsup/Screens/Login.js";
 
     var _reactNative = require(_dependencyMap[2], "react-native");
 
@@ -68,7 +70,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
         width = _Dimensions$get.width,
         height = _Dimensions$get.height;
 
-    var FormLogin = _wrapComponent("FormLogin")(function (_React$Component) {
+    var FormLogin = _wrapComponent("FormLogin")((_temp = _class = function (_React$Component) {
         _inherits(FormLogin, _React$Component);
 
         function FormLogin(props) {
@@ -90,18 +92,6 @@ __d(function (global, require, module, exports, _dependencyMap) {
         }
 
         _createClass(FormLogin, [{
-            key: "componentWillMount",
-            value: function componentWillMount() {
-                _firebase2.default.initializeApp({
-                    apiKey: "AIzaSyCi2kQbt9xjCcvu7x-OUaoxA0gH9lwxz3c",
-                    authDomain: "nailsup-7e965.firebaseapp.com",
-                    databaseURL: "https://nailsup-7e965.firebaseio.com",
-                    projectId: "nailsup-7e965",
-                    storageBucket: "",
-                    messagingSenderId: "118066102064"
-                });
-            }
-        }, {
             key: "onLoginPress",
             value: function onLoginPress() {
                 var _this2 = this;
@@ -114,7 +104,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
                 var email = this.state.email;
 
                 _firebase2.default.auth().signInWithEmailAndPassword(email, password).then(function () {
-                    _this2.props.navigation.navigate('HomeUser');
+                    _this2.props.navigation.navigate('PanelUser');
 
                     _this2.setState({
                         error: '',
@@ -130,92 +120,18 @@ __d(function (global, require, module, exports, _dependencyMap) {
                 });
             }
         }, {
-            key: "onLogoutPress",
-            value: function onLogoutPress() {
-                var _this3 = this;
-
-                this.setState({
-                    error: '',
-                    loading: true
-                });
-                var password = this.state.password;
-                var email = this.state.email;
-
-                _firebase2.default.auth().signInWithEmailAndPassword(email, password).then(function () {
-                    _this3.renderLogin();
-
-                    _this3.setState({
-                        error: '',
-                        loading: false
-                    });
-                }).catch(function () {
-                    _this3.setState({
-                        error: 'Falha de autenticação.',
-                        loading: false
-                    });
-
-                    (0, _reactNativeMessages.showMessage)('Logout falhou!');
-                });
-            }
-        }, {
-            key: "renderLogin",
-            value: function renderLogin() {
-                return _react3.default.createElement(
-                    _reactNative.TouchableHighlight,
-                    {
-                        style: styles.circleBtn,
-                        underlayColor: "transparent",
-                        onPress: this.onLoginPress.bind(this),
-                        __source: {
-                            fileName: _jsxFileName,
-                            lineNumber: 76
-                        }
-                    },
-                    _react3.default.createElement(
-                        _reactNative.View,
-                        {
-                            style: styles.Row,
-                            __source: {
-                                fileName: _jsxFileName,
-                                lineNumber: 79
-                            }
-                        },
-                        _react3.default.createElement(_FontAwesome2.default, {
-                            name: "arrow-right",
-                            style: styles.iconCircle,
-                            size: 25,
-                            color: "#da5353",
-                            __source: {
-                                fileName: _jsxFileName,
-                                lineNumber: 80
-                            }
-                        }),
-                        _react3.default.createElement(
-                            _reactNative.Text,
-                            {
-                                style: styles.TextBtn,
-                                __source: {
-                                    fileName: _jsxFileName,
-                                    lineNumber: 81
-                                }
-                            },
-                            "Cadastro"
-                        )
-                    )
-                );
-            }
-        }, {
             key: "render",
             value: function render() {
-                var _this4 = this;
+                var _this3 = this;
 
+                var navigate = this.props.navigation;
                 return _react3.default.createElement(
                     _reactNative.View,
                     {
                         style: styles.container,
                         __source: {
                             fileName: _jsxFileName,
-                            lineNumber: 90
+                            lineNumber: 55
                         }
                     },
                     _react3.default.createElement(
@@ -225,41 +141,41 @@ __d(function (global, require, module, exports, _dependencyMap) {
                             source: require(_dependencyMap[9], './../images/bgLogin.png'),
                             __source: {
                                 fileName: _jsxFileName,
-                                lineNumber: 91
+                                lineNumber: 56
                             }
                         },
                         _react3.default.createElement(_reactNative.Image, {
                             style: styles.userPhoto,
-                            source: require(_dependencyMap[10], './../images/user.png'),
+                            source: require(_dependencyMap[10], './../images/app.png'),
                             __source: {
                                 fileName: _jsxFileName,
-                                lineNumber: 95
+                                lineNumber: 60
                             }
                         }),
                         _react3.default.createElement(_reactNativeMaterialTextinput2.default, {
                             style: styles.textInputForm,
                             label: "Email",
                             labelColor: "#fff",
-                            inputColor: "#fff",
-                            underlineColor: "#fff",
+                            textColor: "#fff",
+                            underlineColor: "rgb(255,255,255)",
                             width: width - 60,
                             underlineActiveColor: "#fff",
                             activeColor: "#fff",
                             value: this.state.email,
                             onChangeText: function onChangeText(email) {
-                                return _this4.setState({
+                                return _this3.setState({
                                     email: email
                                 });
                             },
                             onSubmitEditing: function onSubmitEditing() {
-                                return _this4.passwordInput.focus();
+                                return _this3.passwordInput.focus();
                             },
                             ref: function ref(input) {
-                                return _this4.userInput = input;
+                                return _this3.userInput = input;
                             },
                             __source: {
                                 fileName: _jsxFileName,
-                                lineNumber: 97
+                                lineNumber: 62
                             }
                         }),
                         _react3.default.createElement(_reactNativeMaterialTextinput2.default, {
@@ -273,19 +189,19 @@ __d(function (global, require, module, exports, _dependencyMap) {
                             secureTextEntry: true,
                             value: this.state.password,
                             onChangeText: function onChangeText(password) {
-                                return _this4.setState({
+                                return _this3.setState({
                                     password: password
                                 });
                             },
                             onSubmitEditing: function onSubmitEditing() {
-                                return _this4.onLoginPress();
+                                return _this3.onLoginPress();
                             },
                             ref: function ref(input) {
-                                return _this4.userInput = input;
+                                return _this3.userInput = input;
                             },
                             __source: {
                                 fileName: _jsxFileName,
-                                lineNumber: 111
+                                lineNumber: 76
                             }
                         }),
                         _react3.default.createElement(
@@ -294,7 +210,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
                                 style: styles.Row,
                                 __source: {
                                     fileName: _jsxFileName,
-                                    lineNumber: 125
+                                    lineNumber: 90
                                 }
                             },
                             _react3.default.createElement(
@@ -305,7 +221,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
                                     onPress: this.onLoginPress.bind(this),
                                     __source: {
                                         fileName: _jsxFileName,
-                                        lineNumber: 127
+                                        lineNumber: 92
                                     }
                                 },
                                 _react3.default.createElement(
@@ -314,7 +230,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
                                         style: styles.Row,
                                         __source: {
                                             fileName: _jsxFileName,
-                                            lineNumber: 130
+                                            lineNumber: 95
                                         }
                                     },
                                     _react3.default.createElement(
@@ -323,7 +239,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
                                             style: styles.TextBtn,
                                             __source: {
                                                 fileName: _jsxFileName,
-                                                lineNumber: 131
+                                                lineNumber: 96
                                             }
                                         },
                                         "Esqueci a senha"
@@ -336,7 +252,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
                                     style: styles.alignRightBottom,
                                     __source: {
                                         fileName: _jsxFileName,
-                                        lineNumber: 134
+                                        lineNumber: 99
                                     }
                                 },
                                 _react3.default.createElement(
@@ -347,7 +263,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
                                         onPress: this.onLoginPress.bind(this),
                                         __source: {
                                             fileName: _jsxFileName,
-                                            lineNumber: 135
+                                            lineNumber: 100
                                         }
                                     },
                                     _react3.default.createElement(
@@ -356,7 +272,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
                                             style: styles.TextBtn,
                                             __source: {
                                                 fileName: _jsxFileName,
-                                                lineNumber: 138
+                                                lineNumber: 103
                                             }
                                         },
                                         "Login"
@@ -368,7 +284,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
                     _react3.default.createElement(_reactNativeMessages.MessageBar, {
                         __source: {
                             fileName: _jsxFileName,
-                            lineNumber: 144
+                            lineNumber: 109
                         }
                     })
                 );
@@ -376,7 +292,14 @@ __d(function (global, require, module, exports, _dependencyMap) {
         }]);
 
         return FormLogin;
-    }(_react3.default.Component));
+    }(_react3.default.Component), _class.navigationOptions = function (_ref) {
+        var navigation = _ref.navigation,
+            screenProps = _ref.screenProps;
+        return {
+            title: "",
+            headerMode: 'screen'
+        };
+    }, _temp));
 
     exports.default = FormLogin;
 
@@ -445,10 +368,10 @@ __d(function (global, require, module, exports, _dependencyMap) {
             fontWeight: 'bold'
         },
         userPhoto: {
-            width: width * 0.25,
-            height: width * 0.25,
-            justifyContent: 'flex-end',
-            margin: 10
+            width: width * 0.2,
+            height: height * 0.2,
+            resizeMode: 'center',
+            marginBottom: height * 0.1
         },
         columns: {
             marginTop: 5
