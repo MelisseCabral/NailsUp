@@ -1,0 +1,13 @@
+__d(function (global, require, module, exports, _dependencyMap) {
+	module.exports = require(_dependencyMap[0], "react-native/Libraries/Image/AssetRegistry").registerAsset({
+		"__packager_asset": true,
+		"httpServerLocation": "/assets/images",
+		"width": 2304,
+		"height": 3456,
+		"scales": [1],
+		"hash": "5dc8ae0e0bc37605a4878142a93875bf",
+		"name": "4",
+		"type": "jpg",
+		"fileHashes": ["5dc8ae0e0bc37605a4878142a93875bf"]
+	});
+});

@@ -141,6 +141,10 @@ __d(function (global, require, module, exports, _dependencyMap) {
         });
         return navigationState;
       }, _this._renderNavigationView = function () {
+        var _this$props3 = _this.props,
+            drawerOpenRoute = _this$props3.drawerOpenRoute,
+            drawerCloseRoute = _this$props3.drawerCloseRoute,
+            drawerToggleRoute = _this$props3.drawerToggleRoute;
         return _react3.default.createElement(_DrawerSidebar2.default, {
           screenProps: _this.props.screenProps,
           navigation: _this._screenNavigationProp,
@@ -149,9 +153,12 @@ __d(function (global, require, module, exports, _dependencyMap) {
           contentOptions: _this.props.contentOptions,
           drawerPosition: _this.props.drawerPosition,
           style: _this.props.style,
+          drawerOpenRoute: drawerOpenRoute,
+          drawerCloseRoute: drawerCloseRoute,
+          drawerToggleRoute: drawerToggleRoute,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 136
+            lineNumber: 139
           }
         });
       }, _temp), _possibleConstructorReturn(_this, _ret);
@@ -233,7 +240,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
             drawerPosition: this.props.drawerPosition === 'right' ? _reactNativeDrawerLayoutPolyfill2.default.positions.Right : _reactNativeDrawerLayoutPolyfill2.default.positions.Left,
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 158
+              lineNumber: 165
             }
           },
           _react3.default.createElement(DrawerScreen, {
@@ -241,7 +248,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
             navigation: this._screenNavigationProp,
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 178
+              lineNumber: 185
             }
           })
         );

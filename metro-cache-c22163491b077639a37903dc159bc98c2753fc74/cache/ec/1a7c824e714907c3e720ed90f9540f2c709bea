@@ -210,7 +210,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
         if (flattenedTabStyle) {
           if (typeof flattenedTabStyle.width === 'number') {
             maxTabBarItemWidth = flattenedTabStyle.width;
-          } else if (typeof flattenedTabStyle.width === 'string' && flattenedTabStyle.endsWith('%')) {
+          } else if (typeof flattenedTabStyle.width === 'string' && flattenedTabStyle.width.endsWith('%')) {
             var width = parseFloat(flattenedTabStyle.width);
 
             if (Number.isFinite(width)) {
@@ -218,7 +218,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
             }
           } else if (typeof flattenedTabStyle.maxWidth === 'number') {
             maxTabBarItemWidth = flattenedTabStyle.maxWidth;
-          } else if (typeof flattenedTabStyle.maxWidth === 'string' && flattenedTabStyle.endsWith('%')) {
+          } else if (typeof flattenedTabStyle.maxWidth === 'string' && flattenedTabStyle.width.endsWith('%')) {
             var _width = parseFloat(flattenedTabStyle.maxWidth);
 
             if (Number.isFinite(_width)) {

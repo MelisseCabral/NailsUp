@@ -15,20 +15,9 @@ __d(function (global, require, module, exports, _dependencyMap) {
       while (1) {
         switch (_context.prev = _context.next) {
           case 0:
-            if (!(type === CAMERA_ROLL && _reactNative.Platform.OS === 'ios')) {
-              _context.next = 2;
-              break;
-            }
-
-            return _context.abrupt("return", {
-              status: 'granted',
-              expires: 'never'
-            });
-
-          case 2:
             return _context.abrupt("return", Permissions.getAsync(type));
 
-          case 3:
+          case 1:
           case "end":
             return _context.stop();
         }
@@ -41,20 +30,9 @@ __d(function (global, require, module, exports, _dependencyMap) {
       while (1) {
         switch (_context2.prev = _context2.next) {
           case 0:
-            if (!(type === CAMERA_ROLL && _reactNative.Platform.OS === 'ios')) {
-              _context2.next = 2;
-              break;
-            }
-
-            return _context2.abrupt("return", {
-              status: 'granted',
-              expires: 'never'
-            });
-
-          case 2:
             return _context2.abrupt("return", Permissions.askAsync(type));
 
-          case 3:
+          case 1:
           case "end":
             return _context2.stop();
         }

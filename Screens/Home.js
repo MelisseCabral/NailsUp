@@ -9,17 +9,27 @@ export default class Home extends React.Component {
       return (
         <Swiper style={styles.wrapper} showsButtons={false}>
           <ImageBackground
-          source={require('./../images/slider_10.png')}
+          source={require('./../images/1.jpg')}
           style={styles.slide1}>
             <Text style={styles.text}>Hello Swiper</Text>
           </ImageBackground>
           <ImageBackground
-          source={require('./../images/slider_6.png')}
+          source={require('./../images/2.jpg')}
           style={styles.slide1}>
             <Text style={styles.text}>Beautiful</Text>
           </ImageBackground>
           <ImageBackground
-          source={require('./../images/slider_1.png')}
+          source={require('./../images/3.jpg')}
+          style={styles.slide1}>
+            <Text style={styles.text}>And simple</Text>
+          </ImageBackground>
+          <ImageBackground
+          source={require('./../images/4.jpg')}
+          style={styles.slide1}>
+            <Text style={styles.text}>Beautiful</Text>
+          </ImageBackground>
+          <ImageBackground
+          source={require('./../images/5.jpg')}
           style={styles.slide1}>
             <Text style={styles.text}>And simple</Text>
           </ImageBackground>

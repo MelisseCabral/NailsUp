@@ -77,7 +77,9 @@ __d(function (global, require, module, exports, _dependencyMap) {
       }
 
       return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = DrawerSidebar.__proto__ || Object.getPrototypeOf(DrawerSidebar)).call.apply(_ref, [this].concat(args))), _this), _this._getScreenOptions = function (routeKey) {
-        var DrawerScreen = _this.props.router.getComponentForRouteName('DrawerClose');
+        var drawerCloseRoute = _this.props.drawerCloseRoute;
+
+        var DrawerScreen = _this.props.router.getComponentForRouteName(drawerCloseRoute);
 
         (0, _invariant2.default)(DrawerScreen.router, 'NavigationComponent with routeName DrawerClose should be a Navigator');
         var childNavigation = _this.props.childNavigationProps[routeKey];
@@ -126,8 +128,9 @@ __d(function (global, require, module, exports, _dependencyMap) {
       }, _this._onItemPress = function (_ref4) {
         var route = _ref4.route,
             focused = _ref4.focused;
+        var drawerCloseRoute = _this.props.drawerCloseRoute;
 
-        _this.props.navigation.navigate('DrawerClose');
+        _this.props.navigation.navigate(drawerCloseRoute);
 
         if (!focused) {
           var subAction = void 0;
@@ -163,7 +166,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
             style: [styles.container, this.props.style],
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 85
+              lineNumber: 87
             }
           },
           _react3.default.createElement(ContentComponent, _extends({}, this.props.contentOptions, {
@@ -178,7 +181,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
             drawerPosition: this.props.drawerPosition,
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 86
+              lineNumber: 88
             }
           }))
         );

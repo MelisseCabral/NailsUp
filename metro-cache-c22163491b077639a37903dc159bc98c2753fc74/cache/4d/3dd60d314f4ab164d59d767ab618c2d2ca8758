@@ -79,7 +79,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
           _react3.default.createElement(
             _reactNative.ImageBackground,
             {
-              source: require(_dependencyMap[6], './../images/slider_10.png'),
+              source: require(_dependencyMap[6], './../images/1.jpg'),
               style: styles.slide1,
               __source: {
                 fileName: _jsxFileName,
@@ -101,7 +101,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
           _react3.default.createElement(
             _reactNative.ImageBackground,
             {
-              source: require(_dependencyMap[7], './../images/slider_6.png'),
+              source: require(_dependencyMap[7], './../images/2.jpg'),
               style: styles.slide1,
               __source: {
                 fileName: _jsxFileName,
@@ -123,7 +123,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
           _react3.default.createElement(
             _reactNative.ImageBackground,
             {
-              source: require(_dependencyMap[8], './../images/slider_1.png'),
+              source: require(_dependencyMap[8], './../images/3.jpg'),
               style: styles.slide1,
               __source: {
                 fileName: _jsxFileName,
@@ -137,6 +137,50 @@ __d(function (global, require, module, exports, _dependencyMap) {
                 __source: {
                   fileName: _jsxFileName,
                   lineNumber: 24
+                }
+              },
+              "And simple"
+            )
+          ),
+          _react3.default.createElement(
+            _reactNative.ImageBackground,
+            {
+              source: require(_dependencyMap[9], './../images/4.jpg'),
+              style: styles.slide1,
+              __source: {
+                fileName: _jsxFileName,
+                lineNumber: 26
+              }
+            },
+            _react3.default.createElement(
+              _reactNative.Text,
+              {
+                style: styles.text,
+                __source: {
+                  fileName: _jsxFileName,
+                  lineNumber: 29
+                }
+              },
+              "Beautiful"
+            )
+          ),
+          _react3.default.createElement(
+            _reactNative.ImageBackground,
+            {
+              source: require(_dependencyMap[10], './../images/5.jpg'),
+              style: styles.slide1,
+              __source: {
+                fileName: _jsxFileName,
+                lineNumber: 31
+              }
+            },
+            _react3.default.createElement(
+              _reactNative.Text,
+              {
+                style: styles.text,
+                __source: {
+                  fileName: _jsxFileName,
+                  lineNumber: 34
                 }
               },
               "And simple"

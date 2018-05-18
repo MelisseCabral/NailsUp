@@ -111,11 +111,12 @@ __d(function (global, require, module, exports, _dependencyMap) {
                         error: '',
                         loading: false
                     });
-                }).catch(function () {
-                    _this2.setState({
+                }).catch(function (error) {
+                    this.setState({
                         error: 'Falha ao criar usuario.',
                         loading: false
                     });
+                    (0, _reactNativeMessages.showMessage)(error.message);
                 });
             }
         }, {
@@ -130,7 +131,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
                         style: styles.container,
                         __source: {
                             fileName: _jsxFileName,
-                            lineNumber: 49
+                            lineNumber: 50
                         }
                     },
                     _react3.default.createElement(
@@ -140,7 +141,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
                             source: require(_dependencyMap[9], './../images/bgLogin.png'),
                             __source: {
                                 fileName: _jsxFileName,
-                                lineNumber: 50
+                                lineNumber: 51
                             }
                         },
                         _react3.default.createElement(_reactNative.Image, {
@@ -148,7 +149,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
                             source: require(_dependencyMap[10], './../images/app.png'),
                             __source: {
                                 fileName: _jsxFileName,
-                                lineNumber: 54
+                                lineNumber: 55
                             }
                         }),
                         _react3.default.createElement(_reactNativeMaterialTextinput2.default, {
@@ -174,7 +175,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
                             },
                             __source: {
                                 fileName: _jsxFileName,
-                                lineNumber: 56
+                                lineNumber: 57
                             }
                         }),
                         _react3.default.createElement(_reactNativeMaterialTextinput2.default, {
@@ -200,7 +201,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
                             },
                             __source: {
                                 fileName: _jsxFileName,
-                                lineNumber: 70
+                                lineNumber: 71
                             }
                         }),
                         _react3.default.createElement(_reactNativeMaterialTextinput2.default, {
@@ -226,7 +227,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
                             },
                             __source: {
                                 fileName: _jsxFileName,
-                                lineNumber: 84
+                                lineNumber: 85
                             }
                         }),
                         _react3.default.createElement(
@@ -235,7 +236,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
                                 style: styles.Row,
                                 __source: {
                                     fileName: _jsxFileName,
-                                    lineNumber: 99
+                                    lineNumber: 100
                                 }
                             },
                             _react3.default.createElement(
@@ -248,7 +249,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
                                     },
                                     __source: {
                                         fileName: _jsxFileName,
-                                        lineNumber: 101
+                                        lineNumber: 102
                                     }
                                 },
                                 _react3.default.createElement(
@@ -257,7 +258,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
                                         style: styles.Row,
                                         __source: {
                                             fileName: _jsxFileName,
-                                            lineNumber: 104
+                                            lineNumber: 105
                                         }
                                     },
                                     _react3.default.createElement(
@@ -266,7 +267,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
                                             style: styles.TextBtn,
                                             __source: {
                                                 fileName: _jsxFileName,
-                                                lineNumber: 105
+                                                lineNumber: 106
                                             }
                                         },
                                         "J\xE1 possui conta?"
@@ -279,7 +280,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
                                     style: styles.alignRightBottom,
                                     __source: {
                                         fileName: _jsxFileName,
-                                        lineNumber: 108
+                                        lineNumber: 109
                                     }
                                 },
                                 _react3.default.createElement(
@@ -290,7 +291,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
                                         onPress: this.onSignUpPress.bind(this),
                                         __source: {
                                             fileName: _jsxFileName,
-                                            lineNumber: 109
+                                            lineNumber: 110
                                         }
                                     },
                                     _react3.default.createElement(
@@ -299,7 +300,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
                                             style: styles.TextBtn,
                                             __source: {
                                                 fileName: _jsxFileName,
-                                                lineNumber: 112
+                                                lineNumber: 113
                                             }
                                         },
                                         "Cadastrar"
@@ -311,7 +312,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
                     _react3.default.createElement(_reactNativeMessages.MessageBar, {
                         __source: {
                             fileName: _jsxFileName,
-                            lineNumber: 118
+                            lineNumber: 119
                         }
                     })
                 );

@@ -25,8 +25,6 @@ __d(function (global, require, module, exports, _dependencyMap) {
 
   var _reactLifecyclesCompat = require(_dependencyMap[4], "react-lifecycles-compat");
 
-  var _reactLifecyclesCompat2 = _interopRequireDefault(_reactLifecyclesCompat);
-
   var _SceneView = require(_dependencyMap[5], "./SceneView");
 
   var _SceneView2 = _interopRequireDefault(_SceneView);
@@ -153,5 +151,5 @@ __d(function (global, require, module, exports, _dependencyMap) {
     }
   });
 
-  exports.default = (0, _reactLifecyclesCompat2.default)(ResourceSavingSceneView);
+  exports.default = (0, _reactLifecyclesCompat.polyfill)(ResourceSavingSceneView);
 });
